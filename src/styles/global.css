@@ -5,3 +5,9 @@
 @theme {
   --font-montserrat-alternates: "Montserrat Alternates", sans-serif;
 }
+
+@layer base {
+  body {
+    font-family: var(--font-montserrat-alternates);
+  }
+}
