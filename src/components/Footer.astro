@@ -1,3 +1,14 @@
+---
+import { getTranslations, type Language } from "../i18n/translations";
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = "es" } = Astro.props;
+const t = getTranslations(lang);
+---
+
 <footer class="bg-slate-900 text-slate-300 py-12 sm:py-16 px-4 sm:px-6">
   <div class="max-w-6xl mx-auto">
     <div class="grid md:grid-cols-3 gap-6 sm:gap-8 mb-8">
@@ -7,8 +18,7 @@
           Sergio Barreras
         </h3>
         <p class="text-slate-400 text-sm sm:text-base mb-3 sm:mb-4">
-          Full Stack Developer especializado en crear aplicaciones web
-          escalables y modernas.
+          {t.footer.description}
         </p>
         <div class="flex gap-3 sm:gap-4">
           <a
@@ -62,7 +72,7 @@
       <!-- COLUMN 2 -->
       <div>
         <h4 class="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4">
-          Enlaces Rápidos
+          {t.footer.quickLinks}
         </h4>
         <ul class="space-y-2">
           <li>
@@ -106,10 +116,10 @@
       <!-- COLUMN 3 -->
       <div>
         <h4 class="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4">
-          DevCrafters
+          {t.footer.devCrafters}
         </h4>
         <p class="text-slate-400 text-sm sm:text-base mb-3 sm:mb-4">
-          Soluciones modernas en web, móvil y cloud.
+          {t.footer.devCraftersDescription}
         </p>
         <a
           href="https://devcrafters.dev"
@@ -117,7 +127,7 @@
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 text-sm sm:text-base text-teal-400 dark:text-teal-400 hover:text-teal-300 dark:hover:text-teal-200 transition-all hover:gap-3 focus:outline-none focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-900 dark:focus:ring-offset-slate-900 rounded px-1 py-1 touch-manipulation active:text-teal-200"
         >
-          Visitar sitio
+          {t.footer.visitSite}
           <svg
             class="w-4 h-4"
             fill="none"
@@ -139,8 +149,7 @@
       class="border-t border-slate-800 dark:border-slate-700 pt-6 sm:pt-8 text-center text-slate-500 dark:text-slate-400 text-sm sm:text-base"
     >
       <p>
-        &copy; {new Date().getFullYear()} Sergio Barreras. Hecho con Astro & Tailwind
-        CSS.
+        &copy; {new Date().getFullYear()} Sergio Barreras. {t.footer.madeWith}
       </p>
     </div>
   </div>

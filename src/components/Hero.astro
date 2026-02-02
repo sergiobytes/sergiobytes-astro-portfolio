@@ -1,3 +1,14 @@
+---
+import { getTranslations, type Language } from "../i18n/translations";
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = "es" } = Astro.props;
+const t = getTranslations(lang);
+---
+
 <section
   id="home"
   class="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-20"
@@ -13,45 +24,41 @@
           <span
             class="px-4 py-2 bg-teal-50 dark:bg-teal-900/30 text-teal-900 dark:text-teal-400 rounded-full text-sm font-medium border border-teal-200 dark:border-teal-700"
           >
-            Disponible para nuevos proyectos
+            {t.hero.available}
           </span>
         </div>
 
         <h1
           class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-white leading-tight"
         >
-          Hola, soy
+          {t.hero.greeting}
           <span class="text-teal-900 dark:text-teal-400">Sergio Barreras</span>
         </h1>
 
         <p
           class="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 font-medium"
         >
-          Full Stack Developer
+          {t.hero.role}
         </p>
 
         <p
           class="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
-        >
-          Especializado en crear aplicaciones web escalables con <strong
-            >Angular</strong
-          >, <strong>NestJS</strong> y <strong>TypeScript</strong>. Apasionado
-          por la arquitectura limpia, experiencia de usuario y automatización.
-        </p>
+          set:html={t.hero.description}
+        />
 
         <div class="flex flex-wrap gap-3 sm:gap-4 pt-4">
           <a
             href="#contact"
             class="px-6 py-3 sm:px-6 sm:py-3 bg-teal-900 dark:bg-teal-600 text-white rounded-lg hover:bg-teal-800 dark:hover:bg-teal-500 transition-all hover:scale-105 hover:shadow-lg font-medium focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-400 focus:ring-offset-2 dark:focus:ring-offset-slate-950 active:scale-95 text-center flex-1 sm:flex-initial touch-manipulation"
           >
-            Contáctame
+            {t.hero.contactBtn}
           </a>
           <a
             href="/cv/Sergio-Barreras-CV.pdf"
             download
             class="px-6 py-3 sm:px-6 sm:py-3 border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 rounded-lg hover:border-teal-900 dark:hover:border-teal-400 hover:text-teal-900 dark:hover:text-teal-400 transition-all hover:shadow-md font-medium focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-400 focus:ring-offset-2 dark:focus:ring-offset-slate-950 active:scale-95 text-center flex-1 sm:flex-initial touch-manipulation"
           >
-            Descargar CV
+            {t.hero.downloadCV}
           </a>
         </div>
 
@@ -125,7 +132,7 @@
             class="absolute -bottom-4 -right-4 bg-white dark:bg-slate-800 px-6 py-3 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 animate-bounce-fade-in"
           >
             <p class="text-sm font-semibold text-teal-900 dark:text-teal-400">
-              4+ años exp.
+              {t.hero.yearsExp}
             </p>
           </div>
         </div>
