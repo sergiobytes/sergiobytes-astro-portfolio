@@ -8,7 +8,7 @@
 
 @layer base {
   html {
-    @apply duration-300;
+    @apply animate-duration-500 duration-1000;
   }
 
   body {
