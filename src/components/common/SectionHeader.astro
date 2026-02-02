@@ -2,9 +2,10 @@
 interface Props {
   title: string;
   subtitle?: string;
+  "data-i18n-subtitle"?: string;
 }
 
-const { title, subtitle } = Astro.props;
+const { title, subtitle, "data-i18n-subtitle": subtitleI18n } = Astro.props;
 ---
 
 <div class="text-center mb-8 sm:mb-10 md:mb-12 animate-fade-in-up" data-reveal>
@@ -17,7 +18,10 @@ const { title, subtitle } = Astro.props;
   <div class="w-20 h-1 bg-teal-900 dark:bg-teal-400 mx-auto"></div>
   {
     subtitle && (
-      <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 mt-6">
+      <p
+        class="text-base sm:text-lg text-slate-600 dark:text-slate-300 mt-6"
+        data-i18n={subtitleI18n}
+      >
         {subtitle}
       </p>
     )

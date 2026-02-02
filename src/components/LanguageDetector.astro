@@ -188,7 +188,7 @@
       "testing",
       "packages",
       "others",
-    ];
+    ] as const;
     categoryKeys.forEach((key) => {
       const categoryEl = document.querySelector(
         `[data-i18n="tech.categories.${key}"]`,
