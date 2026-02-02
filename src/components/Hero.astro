@@ -7,7 +7,7 @@ interface Props {
   lang?: Language;
 }
 
-const { lang = "es" } = Astro.props;
+const { lang = "en" } = Astro.props;
 const t = getTranslations(lang);
 ---
 
@@ -25,6 +25,7 @@ const t = getTranslations(lang);
         <div class="inline-block">
           <span
             class="px-4 py-2 bg-teal-50 dark:bg-teal-900/30 text-teal-900 dark:text-teal-400 rounded-full text-sm font-medium border border-teal-200 dark:border-teal-700"
+            data-i18n="hero.available"
           >
             {t.hero.available}
           </span>
@@ -32,6 +33,7 @@ const t = getTranslations(lang);
 
         <h1
           class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-white leading-tight"
+          data-i18n="hero.greeting"
         >
           {t.hero.greeting}
           <span class="text-teal-900 dark:text-teal-400">Sergio Barreras</span>
@@ -39,23 +41,26 @@ const t = getTranslations(lang);
 
         <p
           class="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 font-medium"
+          data-i18n="hero.role"
         >
           {t.hero.role}
         </p>
 
         <p
           class="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
+          data-i18n="hero.description"
           set:html={t.hero.description}
         />
 
         <div class="flex flex-wrap gap-3 sm:gap-4 pt-4">
-          <Button variant="primary" href="#contact">
+          <Button variant="primary" href="#contact" data-i18n="hero.contactBtn">
             {t.hero.contactBtn}
           </Button>
           <Button
             variant="secondary"
             href="/cv/Sergio-Barreras-CV.pdf"
             download
+            data-i18n="hero.downloadCV"
           >
             {t.hero.downloadCV}
           </Button>
@@ -86,7 +91,10 @@ const t = getTranslations(lang);
           <div
             class="absolute -bottom-4 -right-4 bg-white dark:bg-slate-800 px-6 py-3 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 animate-bounce-fade-in"
           >
-            <p class="text-sm font-semibold text-teal-900 dark:text-teal-400">
+            <p
+              class="text-sm font-semibold text-teal-900 dark:text-teal-400"
+              data-i18n="hero.yearsExp"
+            >
               {t.hero.yearsExp}
             </p>
           </div>

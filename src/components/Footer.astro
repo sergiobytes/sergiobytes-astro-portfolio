@@ -6,7 +6,7 @@ interface Props {
   lang?: Language;
 }
 
-const { lang = "es" } = Astro.props;
+const { lang = "en" } = Astro.props;
 const t = getTranslations(lang);
 ---
 
@@ -18,7 +18,10 @@ const t = getTranslations(lang);
         <h3 class="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4">
           Sergio Barreras
         </h3>
-        <p class="text-slate-400 text-sm sm:text-base mb-3 sm:mb-4">
+        <p
+          class="text-slate-400 text-sm sm:text-base mb-3 sm:mb-4"
+          data-i18n="footer.description"
+        >
           {t.footer.description}
         </p>
         <SocialLinks variant="footer" />
@@ -26,7 +29,10 @@ const t = getTranslations(lang);
 
       <!-- COLUMN 2 -->
       <div>
-        <h4 class="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4">
+        <h4
+          class="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4"
+          data-i18n="footer.quickLinks"
+        >
           {t.footer.quickLinks}
         </h4>
         <ul class="space-y-2">
@@ -34,35 +40,35 @@ const t = getTranslations(lang);
             <a
               href="#about"
               class="text-sm sm:text-base hover:text-teal-400 dark:hover:text-teal-300 transition-all hover:translate-x-1 inline-block focus:outline-none focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-900 dark:focus:ring-offset-slate-900 rounded px-1 py-1 touch-manipulation active:text-teal-300 dark:active:text-teal-200"
-              >{t.nav.about}</a
+              data-i18n="nav.about">{t.nav.about}</a
             >
           </li>
           <li>
             <a
               href="#experience"
               class="text-sm sm:text-base hover:text-teal-400 dark:hover:text-teal-300 transition-all hover:translate-x-1 inline-block focus:outline-none focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-900 dark:focus:ring-offset-slate-900 rounded px-1 py-1 touch-manipulation active:text-teal-300 dark:active:text-teal-200"
-              >{t.nav.experience}</a
+              data-i18n="nav.experience">{t.nav.experience}</a
             >
           </li>
           <li>
             <a
               href="#projects"
               class="text-sm sm:text-base hover:text-teal-400 dark:hover:text-teal-300 transition-all hover:translate-x-1 inline-block focus:outline-none focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-900 dark:focus:ring-offset-slate-900 rounded px-1 py-1 touch-manipulation active:text-teal-300 dark:active:text-teal-200"
-              >{t.nav.projects}</a
+              data-i18n="nav.projects">{t.nav.projects}</a
             >
           </li>
           <li>
             <a
               href="#tech"
               class="text-sm sm:text-base hover:text-teal-400 dark:hover:text-teal-300 transition-all hover:translate-x-1 inline-block focus:outline-none focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-900 dark:focus:ring-offset-slate-900 rounded px-1 py-1 touch-manipulation active:text-teal-300 dark:active:text-teal-200"
-              >{t.nav.tech}</a
+              data-i18n="nav.tech">{t.nav.tech}</a
             >
           </li>
           <li>
             <a
               href="#contact"
               class="text-sm sm:text-base hover:text-teal-400 dark:hover:text-teal-300 transition-all hover:translate-x-1 inline-block focus:outline-none focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-900 dark:focus:ring-offset-slate-900 rounded px-1 py-1 touch-manipulation active:text-teal-300 dark:active:text-teal-200"
-              >{t.nav.contact}</a
+              data-i18n="nav.contact">{t.nav.contact}</a
             >
           </li>
         </ul>
@@ -70,10 +76,16 @@ const t = getTranslations(lang);
 
       <!-- COLUMN 3 -->
       <div>
-        <h4 class="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4">
+        <h4
+          class="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4"
+          data-i18n="footer.devCrafters"
+        >
           {t.footer.devCrafters}
         </h4>
-        <p class="text-slate-400 text-sm sm:text-base mb-3 sm:mb-4">
+        <p
+          class="text-slate-400 text-sm sm:text-base mb-3 sm:mb-4"
+          data-i18n="footer.devCraftersDescription"
+        >
           {t.footer.devCraftersDescription}
         </p>
         <a
@@ -81,6 +93,7 @@ const t = getTranslations(lang);
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 text-sm sm:text-base text-teal-400 dark:text-teal-400 hover:text-teal-300 dark:hover:text-teal-200 transition-all hover:gap-3 focus:outline-none focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-900 dark:focus:ring-offset-slate-900 rounded px-1 py-1 touch-manipulation active:text-teal-200"
+          data-i18n="footer.visitSite"
         >
           {t.footer.visitSite}
           <svg
@@ -103,7 +116,7 @@ const t = getTranslations(lang);
     <div
       class="border-t border-slate-800 dark:border-slate-700 pt-6 sm:pt-8 text-center text-slate-500 dark:text-slate-400 text-sm sm:text-base"
     >
-      <p>
+      <p data-i18n="footer.madeWith">
         &copy; {new Date().getFullYear()} Sergio Barreras. {t.footer.madeWith}
       </p>
     </div>

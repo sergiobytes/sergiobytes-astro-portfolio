@@ -35,6 +35,7 @@ const Element = href ? "a" : "button";
   download={download}
   type={!href ? type : undefined}
   class={classes}
+  {...Astro.props}
 >
   <slot />
 </Element>

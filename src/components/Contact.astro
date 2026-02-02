@@ -6,7 +6,7 @@ interface Props {
   lang?: Language;
 }
 
-const { lang = "es" } = Astro.props;
+const { lang = "en" } = Astro.props;
 const t = getTranslations(lang);
 ---
 
@@ -15,7 +15,14 @@ const t = getTranslations(lang);
   class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white dark:bg-slate-900"
 >
   <div class="max-w-4xl mx-auto">
-    <SectionHeader title={t.contact.title} subtitle={t.contact.description} />
+    <SectionHeader
+      title={t.contact.title}
+      subtitle={t.contact.description}
+      data-i18n="contact.title"
+    />
+    <p class="hidden" data-i18n="contact.description">
+      {t.contact.description}
+    </p>
 
     <div class="grid md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12">
       <!-- EMAIL -->
@@ -41,7 +48,10 @@ const t = getTranslations(lang);
             ></path>
           </svg>
         </div>
-        <h3 class="font-bold text-slate-900 dark:text-white mb-2">
+        <h3
+          class="font-bold text-slate-900 dark:text-white mb-2"
+          data-i18n="contact.email"
+        >
           {t.contact.email}
         </h3>
         <p class="text-sm text-slate-600 dark:text-slate-300">
@@ -71,7 +81,12 @@ const t = getTranslations(lang);
             ></path>
           </svg>
         </div>
-        <h3 class="font-bold text-slate-900 dark:text-white mb-2">LinkedIn</h3>
+        <h3
+          class="font-bold text-slate-900 dark:text-white mb-2"
+          data-i18n="contact.linkedin"
+        >
+          LinkedIn
+        </h3>
         <p class="text-sm text-slate-600 dark:text-slate-300">
           sergio-barreras
         </p>
@@ -99,7 +114,12 @@ const t = getTranslations(lang);
             ></path>
           </svg>
         </div>
-        <h3 class="font-bold text-slate-900 dark:text-white mb-2">GitHub</h3>
+        <h3
+          class="font-bold text-slate-900 dark:text-white mb-2"
+          data-i18n="contact.github"
+        >
+          GitHub
+        </h3>
         <p class="text-sm text-slate-600 dark:text-slate-300">@sergiobytes</p>
       </a>
     </div>
@@ -109,13 +129,19 @@ const t = getTranslations(lang);
       class="text-center bg-linear-to-r from-teal-900 to-teal-700 text-white p-8 sm:p-10 md:p-12 rounded-2xl animate-fade-up"
       data-reveal
     >
-      <h3 class="text-2xl sm:text-3xl font-bold mb-4">{t.contact.cta}</h3>
-      <p class="text-teal-100 mb-6 sm:mb-8 text-base sm:text-lg">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-4" data-i18n="contact.cta">
+        {t.contact.cta}
+      </h3>
+      <p
+        class="text-teal-100 mb-6 sm:mb-8 text-base sm:text-lg"
+        data-i18n="contact.ctaDescription"
+      >
         {t.contact.ctaDescription}
       </p>
       <a
         href="mailto:sergiobg.isc@gmail.com"
         class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white dark:bg-slate-100 text-teal-900 dark:text-teal-900 rounded-lg hover:bg-slate-100 dark:hover:bg-white transition-all hover:scale-110 hover:shadow-xl font-bold text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-teal-900 active:scale-95 touch-manipulation"
+        data-i18n="contact.ctaButton"
       >
         {t.contact.ctaButton}
         <svg

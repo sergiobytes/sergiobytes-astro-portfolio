@@ -1,0 +1,95 @@
+---
+// Language selector component
+---
+
+<div class="relative">
+  <button
+    id="language-selector"
+    class="p-2 sm:p-3 text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors touch-manipulation flex items-center gap-1"
+    aria-label="Select Language"
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+      ></path>
+    </svg>
+    <span id="current-lang" class="text-sm font-medium hidden sm:inline"
+      >EN</span
+    >
+  </button>
+
+  <div
+    id="language-menu"
+    class="hidden absolute right-0 mt-2 w-32 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 z-50"
+  >
+    <button
+      data-lang="en"
+      class="lang-option w-full text-left px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 hover:text-teal-900 dark:hover:text-teal-400 transition-colors first:rounded-t-lg"
+    >
+      🇺🇸 English
+    </button>
+    <button
+      data-lang="es"
+      class="lang-option w-full text-left px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 hover:text-teal-900 dark:hover:text-teal-400 transition-colors last:rounded-b-lg"
+    >
+      🇪🇸 Español
+    </button>
+  </div>
+</div>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    const selector = document.getElementById("language-selector");
+    const menu = document.getElementById("language-menu");
+    const currentLangEl = document.getElementById("current-lang");
+    const langOptions = document.querySelectorAll(".lang-option");
+
+    // Get current language from localStorage or default to English
+    const currentLang = localStorage.getItem("lang") || "en";
+    if (currentLangEl) {
+      currentLangEl.textContent = currentLang.toUpperCase();
+    }
+
+    // Toggle menu
+    if (selector && menu) {
+      selector.addEventListener("click", function (e) {
+        e.stopPropagation();
+        menu.classList.toggle("hidden");
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (e) {
+        if (!selector.contains(e.target) && !menu.contains(e.target)) {
+          menu.classList.add("hidden");
+        }
+      });
+    }
+
+    // Handle language selection
+    langOptions.forEach(function (option) {
+      option.addEventListener("click", function () {
+        const newLang = this.getAttribute("data-lang");
+
+        // Close menu
+        if (menu) {
+          menu.classList.add("hidden");
+        }
+
+        // Update current language display
+        if (currentLangEl) {
+          currentLangEl.textContent = newLang.toUpperCase();
+        }
+
+        // Dispatch custom event for language change
+        window.dispatchEvent(
+          new CustomEvent("languageChanged", {
+            detail: { lang: newLang },
+          }),
+        );
+      });
+    });
+  });
+</script>

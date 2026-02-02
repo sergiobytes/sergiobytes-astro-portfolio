@@ -6,59 +6,69 @@ interface Props {
   lang?: Language;
 }
 
-const { lang = "es" } = Astro.props;
+const { lang = "en" } = Astro.props;
 const t = getTranslations(lang);
 
 const techCategories = [
   {
-    name: "Lenguajes",
+    name: t.tech.categories.languages,
+    key: "languages",
     icon: "💡",
     skills: "javascript,typescript,python,csharp,dart,java",
   },
   {
-    name: "Frontend",
+    name: t.tech.categories.frontend,
+    key: "frontend",
     icon: "💻",
     skills:
       "html,css,sass,tailwind,materialui,daisyui,vite,angular,vue,react,nuxt",
   },
   {
-    name: "Mobile",
+    name: t.tech.categories.mobile,
+    key: "mobile",
     icon: "📱",
     skills: "flutter,android",
   },
   {
-    name: "Backend & APIs",
+    name: t.tech.categories.backend,
+    key: "backend",
     icon: "🧠",
     skills:
       "bun,nodejs,deno,nestjs,express,dotnet,django,graphql,apollo,jwt,stripe,twilio",
   },
   {
-    name: " Background Jobs & Messaging",
+    name: t.tech.categories.jobs,
+    key: "jobs",
     icon: "🔄",
     skills: "redis,bullmq",
   },
   {
-    name: "Databases",
+    name: t.tech.categories.databases,
+    key: "databases",
     icon: "🗄️",
     skills: "sqlserver,postgresql,sqlite,mongodb,prisma",
   },
   {
-    name: "DevOps & Cloud",
+    name: t.tech.categories.devops,
+    key: "devops",
     icon: "⚙️",
     skills: "docker,kubernetes,gcp,azure,netlify,render,nginx,n8n",
   },
   {
-    name: "Testing & Tools",
+    name: t.tech.categories.testing,
+    key: "testing",
     icon: "🧪",
     skills: "jest,vitest,postman,swagger",
   },
   {
-    name: "Package & State Management",
+    name: t.tech.categories.packages,
+    key: "packages",
     icon: "📦",
     skills: "npm,pnpm,pinia,tanstack,riverpod,bloc,getx",
   },
   {
-    name: "Others",
+    name: t.tech.categories.others,
+    key: "others",
     icon: "🛠️",
     skills:
       "git,github,githubcopilot,gemini,chatgpt,claudeai,rxjs,visualstudio,vscode",
@@ -77,12 +87,14 @@ const techCategories = [
     >
       <h2
         class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4"
+        data-i18n="tech.title"
       >
         {t.tech.title}
       </h2>
       <div class="w-20 h-1 bg-teal-900 dark:bg-teal-600 mx-auto mb-6"></div>
       <p
         class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto"
+        data-i18n="tech.description"
       >
         {t.tech.description}
       </p>
@@ -98,7 +110,10 @@ const techCategories = [
           >
             <div class="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
               <span class="text-2xl sm:text-3xl">{category.icon}</span>
-              <h3 class="text-base sm:text-lg md:text-xl font-bold text-slate-900 dark:text-white">
+              <h3
+                class="text-base sm:text-lg md:text-xl font-bold text-slate-900 dark:text-white"
+                data-i18n={`tech.categories.${category.key}`}
+              >
                 {category.name}
               </h3>
             </div>
@@ -127,19 +142,26 @@ const techCategories = [
           class="h-12"
         />
       </div>
-      <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
-        Co-fundador de DevCrafters
+      <h3
+        class="text-2xl font-bold text-slate-900 dark:text-white mb-3"
+        data-i18n="tech.devCraftersTitle"
+      >
+        {t.tech.devCraftersTitle}
       </h3>
-      <p class="text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
-        Soluciones modernas en web, móvil y cloud para impulsar tu negocio
+      <p
+        class="text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto"
+        data-i18n="tech.devCraftersDescription"
+      >
+        {t.tech.devCraftersDescription}
       </p>
       <a
         href="https://devcrafters.dev"
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center gap-2 px-6 py-3 bg-teal-900 dark:bg-teal-600 text-white rounded-lg hover:bg-teal-800 dark:hover:bg-teal-500 transition-all hover:scale-105 hover:shadow-lg font-medium focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-600 focus:ring-offset-2"
+        data-i18n="tech.devCraftersButton"
       >
-        Visitar DevCrafters
+        {t.tech.devCraftersButton}
         <svg
           class="w-5 h-5 transition-transform group-hover:translate-x-1"
           fill="none"

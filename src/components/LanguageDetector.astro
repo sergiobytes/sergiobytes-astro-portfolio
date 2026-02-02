@@ -1,19 +1,311 @@
-<script is:inline>
-  // Detect browser language and set attribute for CSS targeting
-  (function () {
-    const savedLang = localStorage.getItem("lang");
-    const browserLang = navigator.language.split("-")[0];
-    const supportedLangs = ["es", "en"];
-    
-    // Determine language: saved > browser > default
-    const detectedLang = savedLang || 
-      (supportedLangs.includes(browserLang) ? browserLang : "es");
-    
-    // Save to localStorage
-    localStorage.setItem("lang", detectedLang);
-    
-    // Set HTML lang attribute immediately
-    document.documentElement.setAttribute("lang", detectedLang);
-    document.documentElement.setAttribute("data-lang", detectedLang);
-  })();
+<script>
+  import { getTranslations } from "../i18n/translations";
+
+  // Update page content based on selected language
+  function updatePageLanguage(lang: "es" | "en") {
+    const t = getTranslations(lang);
+
+    // Update HTML lang attribute
+    document.documentElement.setAttribute("lang", lang);
+
+    // Update navigation
+    document
+      .querySelectorAll('[data-i18n="nav.about"]')
+      .forEach((el) => (el.textContent = t.nav.about));
+    document
+      .querySelectorAll('[data-i18n="nav.experience"]')
+      .forEach((el) => (el.textContent = t.nav.experience));
+    document
+      .querySelectorAll('[data-i18n="nav.projects"]')
+      .forEach((el) => (el.textContent = t.nav.projects));
+    document
+      .querySelectorAll('[data-i18n="nav.tech"]')
+      .forEach((el) => (el.textContent = t.nav.tech));
+    document
+      .querySelectorAll('[data-i18n="nav.contact"]')
+      .forEach((el) => (el.textContent = t.nav.contact));
+
+    // Update hero section
+    const heroAvailable = document.querySelector(
+      '[data-i18n="hero.available"]',
+    );
+    if (heroAvailable) heroAvailable.textContent = t.hero.available;
+
+    const heroGreeting = document.querySelector('[data-i18n="hero.greeting"]');
+    if (heroGreeting) heroGreeting.textContent = t.hero.greeting;
+
+    const heroRole = document.querySelector('[data-i18n="hero.role"]');
+    if (heroRole) heroRole.textContent = t.hero.role;
+
+    const heroDescription = document.querySelector(
+      '[data-i18n="hero.description"]',
+    );
+    if (heroDescription) heroDescription.innerHTML = t.hero.description;
+
+    const heroContactBtn = document.querySelector(
+      '[data-i18n="hero.contactBtn"]',
+    );
+    if (heroContactBtn) heroContactBtn.textContent = t.hero.contactBtn;
+
+    const heroDownloadCV = document.querySelector(
+      '[data-i18n="hero.downloadCV"]',
+    );
+    if (heroDownloadCV) heroDownloadCV.textContent = t.hero.downloadCV;
+
+    const heroYearsExp = document.querySelector('[data-i18n="hero.yearsExp"]');
+    if (heroYearsExp) heroYearsExp.textContent = t.hero.yearsExp;
+
+    // Update section titles
+    const aboutTitle = document.querySelector('[data-i18n="about.title"]');
+    if (aboutTitle) aboutTitle.textContent = t.about.title;
+
+    const experienceTitle = document.querySelector(
+      '[data-i18n="experience.title"]',
+    );
+    if (experienceTitle) experienceTitle.textContent = t.experience.title;
+
+    const projectsTitle = document.querySelector(
+      '[data-i18n="projects.title"]',
+    );
+    if (projectsTitle) projectsTitle.textContent = t.projects.title;
+
+    const techTitle = document.querySelector('[data-i18n="tech.title"]');
+    if (techTitle) techTitle.textContent = t.tech.title;
+
+    const contactTitle = document.querySelector('[data-i18n="contact.title"]');
+    if (contactTitle) contactTitle.textContent = t.contact.title;
+
+    // Update footer
+    const footerDescription = document.querySelector(
+      '[data-i18n="footer.description"]',
+    );
+    if (footerDescription) footerDescription.textContent = t.footer.description;
+
+    const footerQuickLinks = document.querySelector(
+      '[data-i18n="footer.quickLinks"]',
+    );
+    if (footerQuickLinks) footerQuickLinks.textContent = t.footer.quickLinks;
+
+    const footerDevCrafters = document.querySelector(
+      '[data-i18n="footer.devCrafters"]',
+    );
+    if (footerDevCrafters) footerDevCrafters.textContent = t.footer.devCrafters;
+
+    const footerDevCraftersDesc = document.querySelector(
+      '[data-i18n="footer.devCraftersDescription"]',
+    );
+    if (footerDevCraftersDesc)
+      footerDevCraftersDesc.textContent = t.footer.devCraftersDescription;
+
+    const footerVisitSite = document.querySelector(
+      '[data-i18n="footer.visitSite"]',
+    );
+    if (footerVisitSite) footerVisitSite.textContent = t.footer.visitSite;
+
+    const footerMadeWith = document.querySelector(
+      '[data-i18n="footer.madeWith"]',
+    );
+    if (footerMadeWith) footerMadeWith.textContent = t.footer.madeWith;
+
+    // Update about section
+    const aboutParagraph1 = document.querySelector(
+      '[data-i18n="about.paragraph1"]',
+    );
+    if (aboutParagraph1) aboutParagraph1.innerHTML = t.about.paragraph1;
+
+    const aboutParagraph2 = document.querySelector(
+      '[data-i18n="about.paragraph2"]',
+    );
+    if (aboutParagraph2) aboutParagraph2.innerHTML = t.about.paragraph2;
+
+    const aboutParagraph3 = document.querySelector(
+      '[data-i18n="about.paragraph3"]',
+    );
+    if (aboutParagraph3) aboutParagraph3.innerHTML = t.about.paragraph3;
+
+    const aboutDevCrafters = document.querySelector(
+      '[data-i18n="about.devCraftersLink"]',
+    );
+    if (aboutDevCrafters)
+      aboutDevCrafters.textContent = t.about.devCraftersLink;
+
+    const aboutStatsYears = document.querySelector(
+      '[data-i18n="about.stats.years"]',
+    );
+    if (aboutStatsYears) aboutStatsYears.textContent = t.about.stats.years;
+
+    const aboutStatsProjects = document.querySelector(
+      '[data-i18n="about.stats.projects"]',
+    );
+    if (aboutStatsProjects)
+      aboutStatsProjects.textContent = t.about.stats.projects;
+
+    const aboutStatsCerts = document.querySelector(
+      '[data-i18n="about.stats.certifications"]',
+    );
+    if (aboutStatsCerts)
+      aboutStatsCerts.textContent = t.about.stats.certifications;
+
+    const aboutStatsCommitment = document.querySelector(
+      '[data-i18n="about.stats.commitment"]',
+    );
+    if (aboutStatsCommitment)
+      aboutStatsCommitment.textContent = t.about.stats.commitment;
+
+    // Update contact section
+    const contactDescription = document.querySelector(
+      '[data-i18n="contact.description"]',
+    );
+    if (contactDescription)
+      contactDescription.textContent = t.contact.description;
+
+    const contactEmail = document.querySelector('[data-i18n="contact.email"]');
+    if (contactEmail) contactEmail.textContent = t.contact.email;
+
+    // Update projects section
+    document
+      .querySelectorAll('[data-i18n="projects.demo"]')
+      .forEach((el) => (el.textContent = t.projects.demo));
+    document
+      .querySelectorAll('[data-i18n="projects.github"]')
+      .forEach((el) => (el.textContent = t.projects.github));
+
+    // Update tech section
+    const techDescription = document.querySelector(
+      '[data-i18n="tech.description"]',
+    );
+    if (techDescription) techDescription.textContent = t.tech.description;
+
+    // Update tech categories
+    const categoryKeys = [
+      "languages",
+      "frontend",
+      "mobile",
+      "backend",
+      "jobs",
+      "databases",
+      "devops",
+      "testing",
+      "packages",
+      "others",
+    ];
+    categoryKeys.forEach((key) => {
+      const categoryEl = document.querySelector(
+        `[data-i18n="tech.categories.${key}"]`,
+      );
+      if (categoryEl) categoryEl.textContent = t.tech.categories[key];
+    });
+
+    const techDevCraftersTitle = document.querySelector(
+      '[data-i18n="tech.devCraftersTitle"]',
+    );
+    if (techDevCraftersTitle)
+      techDevCraftersTitle.textContent = t.tech.devCraftersTitle;
+
+    const techDevCraftersDesc = document.querySelector(
+      '[data-i18n="tech.devCraftersDescription"]',
+    );
+    if (techDevCraftersDesc)
+      techDevCraftersDesc.textContent = t.tech.devCraftersDescription;
+
+    const techDevCraftersBtn = document.querySelector(
+      '[data-i18n="tech.devCraftersButton"]',
+    );
+    if (techDevCraftersBtn)
+      techDevCraftersBtn.textContent = t.tech.devCraftersButton;
+
+    // Update contact CTA
+    const contactCta = document.querySelector('[data-i18n="contact.cta"]');
+    if (contactCta) contactCta.textContent = t.contact.cta;
+
+    const contactCtaDesc = document.querySelector(
+      '[data-i18n="contact.ctaDescription"]',
+    );
+    if (contactCtaDesc) contactCtaDesc.textContent = t.contact.ctaDescription;
+
+    const contactCtaBtn = document.querySelector(
+      '[data-i18n="contact.ctaButton"]',
+    );
+    if (contactCtaBtn) contactCtaBtn.textContent = t.contact.ctaButton;
+
+    const contactLinkedin = document.querySelector(
+      '[data-i18n="contact.linkedin"]',
+    );
+    if (contactLinkedin) contactLinkedin.textContent = t.contact.linkedin;
+
+    const contactGithub = document.querySelector(
+      '[data-i18n="contact.github"]',
+    );
+    if (contactGithub) contactGithub.textContent = t.contact.github;
+
+    // Update experience section (dynamic content)
+    t.experience.experiences.forEach((exp, index) => {
+      const roleEl = document.querySelector(
+        `[data-i18n="experience.experiences.${index}.role"]`,
+      );
+      if (roleEl) roleEl.textContent = exp.role;
+
+      const companyEl = document.querySelector(
+        `[data-i18n="experience.experiences.${index}.company"]`,
+      );
+      if (companyEl) companyEl.textContent = exp.company;
+
+      const periodEl = document.querySelector(
+        `[data-i18n="experience.experiences.${index}.period"]`,
+      );
+      if (periodEl) periodEl.textContent = exp.period;
+
+      const locationEl = document.querySelector(
+        `[data-i18n="experience.experiences.${index}.location"]`,
+      );
+      if (locationEl) locationEl.textContent = exp.location;
+
+      exp.highlights.forEach((highlight, highlightIndex) => {
+        const highlightEl = document.querySelector(
+          `[data-i18n="experience.experiences.${index}.highlights.${highlightIndex}"]`,
+        );
+        if (highlightEl) highlightEl.textContent = highlight;
+      });
+    });
+
+    // Update projects section (dynamic content)
+    t.projects.items.forEach((project, index) => {
+      const nameEl = document.querySelector(
+        `[data-i18n="projects.items.${index}.name"]`,
+      );
+      if (nameEl) nameEl.textContent = project.name;
+
+      const taglineEl = document.querySelector(
+        `[data-i18n="projects.items.${index}.tagline"]`,
+      );
+      if (taglineEl) taglineEl.textContent = project.tagline;
+
+      const descriptionEl = document.querySelector(
+        `[data-i18n="projects.items.${index}.description"]`,
+      );
+      if (descriptionEl) descriptionEl.textContent = project.description;
+    });
+  }
+
+  // Initialize language on page load
+  const savedLangRaw = localStorage.getItem("lang");
+  const savedLang: "es" | "en" =
+    savedLangRaw === "es" || savedLangRaw === "en" ? savedLangRaw : "en";
+  localStorage.setItem("lang", savedLang);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () =>
+      updatePageLanguage(savedLang),
+    );
+  } else {
+    updatePageLanguage(savedLang);
+  }
+
+  // Listen for language change events
+  window.addEventListener("languageChanged", function (e) {
+    const event = e as CustomEvent<{ lang: "es" | "en" }>;
+    const newLang = event.detail.lang;
+    localStorage.setItem("lang", newLang);
+    updatePageLanguage(newLang);
+  });
 </script>

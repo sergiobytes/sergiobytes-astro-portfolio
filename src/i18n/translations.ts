@@ -130,6 +130,10 @@ export const translations = {
         packages: "Package & State Management",
         others: "Others",
       },
+      devCraftersTitle: "Co-fundador de DevCrafters",
+      devCraftersDescription:
+        "Soluciones modernas en web, móvil y cloud para impulsar tu negocio",
+      devCraftersButton: "Visitar DevCrafters",
     },
     contact: {
       title: "Trabajemos juntos",
@@ -139,6 +143,8 @@ export const translations = {
       ctaDescription:
         "Contáctame y trabajemos juntos para hacer realidad tu visión.",
       ctaButton: "Envíame un email",
+      linkedin: "LinkedIn",
+      github: "GitHub",
     },
     footer: {
       description:
@@ -281,6 +287,10 @@ export const translations = {
         packages: "Package & State Management",
         others: "Others",
       },
+      devCraftersTitle: "Co-founder of DevCrafters",
+      devCraftersDescription:
+        "Modern solutions in web, mobile and cloud to boost your business",
+      devCraftersButton: "Visit DevCrafters",
     },
     contact: {
       title: "Let's Work Together",
@@ -290,6 +300,8 @@ export const translations = {
       ctaDescription:
         "Contact me and let's work together to bring your vision to life.",
       ctaButton: "Send me an email",
+      linkedin: "LinkedIn",
+      github: "GitHub",
     },
     footer: {
       description:
