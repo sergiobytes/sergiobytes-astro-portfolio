@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;300;400;700&display=swap");
+@import "tailwindcss";
+@import "tailwind-animations";
+
+@theme {
+  --font-montserrat-alternates: "Montserrat Alternates", sans-serif;
+}
