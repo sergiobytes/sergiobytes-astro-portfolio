@@ -2,6 +2,8 @@
 @import "tailwindcss";
 @import "tailwind-animations";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-montserrat-alternates: "Montserrat Alternates", sans-serif;
 }
@@ -11,6 +13,10 @@
     @apply animate-duration-500 duration-1000;
     scroll-behavior: smooth;
     scroll-padding-top: 80px; /* Account for fixed header */
+  }
+
+  html.dark {
+    color-scheme: dark;
   }
 
   body {
@@ -60,6 +66,11 @@
   ::selection {
     background-color: theme("colors.teal.900");
     color: white;
+  }
+
+  .dark ::selection {
+    background-color: theme("colors.teal.400");
+    color: theme("colors.slate.900");
   }
 
   /* Smooth transforms for better performance */

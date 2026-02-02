@@ -56,17 +56,24 @@ const techCategories = [
 ];
 ---
 
-<section id="tech" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-slate-50">
+<section
+  id="tech"
+  class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-slate-50 dark:bg-slate-800"
+>
   <div class="max-w-6xl mx-auto">
     <div
       class="text-center mb-8 sm:mb-10 md:mb-12 animate-fade-in-up"
       data-reveal
     >
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+      <h2
+        class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4"
+      >
         Stack Tecnológico
       </h2>
-      <div class="w-20 h-1 bg-teal-900 mx-auto mb-6"></div>
-      <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+      <div class="w-20 h-1 bg-teal-900 dark:bg-teal-600 mx-auto mb-6"></div>
+      <p
+        class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto"
+      >
         Tecnologías y herramientas que utilizo para construir soluciones
         robustas y escalables
       </p>
@@ -76,13 +83,13 @@ const techCategories = [
       {
         techCategories.map((category, index) => (
           <div
-            class="bg-white p-4 sm:p-5 md:p-6 rounded-xl border border-slate-200 hover:border-teal-200 hover:shadow-xl transition-all animate-fade-up hover:scale-105 cursor-default"
+            class="bg-white dark:bg-slate-900 p-4 sm:p-5 md:p-6 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-teal-200 dark:hover:border-teal-600 hover:shadow-xl transition-all animate-fade-up hover:scale-105 cursor-default"
             style={`animation-delay: ${index * 100}ms`}
             data-reveal
           >
             <div class="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
               <span class="text-2xl sm:text-3xl">{category.icon}</span>
-              <h3 class="text-base sm:text-lg md:text-xl font-bold text-slate-900">
+              <h3 class="text-base sm:text-lg md:text-xl font-bold text-slate-900 dark:text-white">
                 {category.name}
               </h3>
             </div>
@@ -101,7 +108,7 @@ const techCategories = [
 
     <!-- DEVCRAFTERS CTA -->
     <div
-      class="mt-12 text-center bg-linear-to-r from-teal-50 to-sky-50 p-8 rounded-xl border border-teal-200 animate-fade-up"
+      class="mt-12 text-center bg-linear-to-r from-teal-50 to-sky-50 dark:from-slate-800 dark:to-slate-900 p-8 rounded-xl border border-teal-200 dark:border-slate-700 animate-fade-up"
       data-reveal
     >
       <div class="flex justify-center mb-4">
@@ -111,17 +118,17 @@ const techCategories = [
           class="h-12"
         />
       </div>
-      <h3 class="text-2xl font-bold text-slate-900 mb-3">
+      <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
         Co-fundador de DevCrafters
       </h3>
-      <p class="text-slate-600 mb-6 max-w-2xl mx-auto">
+      <p class="text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
         Soluciones modernas en web, móvil y cloud para impulsar tu negocio
       </p>
       <a
         href="https://devcrafters.dev"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 px-6 py-3 bg-teal-900 text-white rounded-lg hover:bg-teal-800 transition-all hover:scale-105 hover:shadow-lg font-medium focus:outline-none focus:ring-2 focus:ring-teal-900 focus:ring-offset-2"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-teal-900 dark:bg-teal-600 text-white rounded-lg hover:bg-teal-800 dark:hover:bg-teal-500 transition-all hover:scale-105 hover:shadow-lg font-medium focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-600 focus:ring-offset-2"
       >
         Visitar DevCrafters
         <svg

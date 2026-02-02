@@ -1,15 +1,15 @@
 <header
   id="main-header"
-  class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200 animate-fade-in-down transition-transform duration-300"
+  class="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-700 animate-fade-in-down transition-transform duration-300"
 >
   <nav class="max-w-6xl mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
       <!-- LOGO/NAME -->
       <a
         href="#home"
-        class="text-xl font-bold text-slate-900 hover:text-teal-700 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-900 focus:ring-offset-2 rounded"
+        class="text-xl font-bold text-slate-900 dark:text-white hover:text-teal-700 dark:hover:text-teal-400 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-400 focus:ring-offset-2 rounded"
       >
-        Sergio <span class="text-teal-900">Barreras</span>
+        Sergio <span class="text-teal-900 dark:text-teal-400">Barreras</span>
       </a>
 
       <!-- DESKTOP NAVIGATION -->
@@ -17,208 +17,284 @@
         <li>
           <a
             href="#about"
-            class="text-slate-600 hover:text-teal-900 transition-all hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-teal-900 focus:ring-offset-2 rounded px-2 py-1"
+            class="text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 transition-all hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900 rounded px-2 py-1"
             >Sobre mí
           </a>
         </li>
         <li>
           <a
             href="#experience"
-            class="text-slate-600 hover:text-teal-900 transition-all hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-teal-900 focus:ring-offset-2 rounded px-2 py-1"
+            class="text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 transition-all hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900 rounded px-2 py-1"
             >Experiencia
           </a>
         </li>
         <li>
           <a
             href="#projects"
-            class="text-slate-600 hover:text-teal-900 transition-all hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-teal-900 focus:ring-offset-2 rounded px-2 py-1"
+            class="text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 transition-all hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900 rounded px-2 py-1"
             >Proyectos
           </a>
         </li>
         <li>
           <a
             href="#tech"
-            class="text-slate-600 hover:text-teal-900 transition-all hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-teal-900 focus:ring-offset-2 rounded px-2 py-1"
+            class="text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 transition-all hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900 rounded px-2 py-1"
             >Tecnologías
           </a>
         </li>
         <li>
           <a
             href="#contact"
-            class="px-5 py-2 bg-teal-900 text-white rounded-lg hover:bg-teal-800 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-900 focus:ring-offset-2"
+            class="px-5 py-2 bg-teal-900 dark:bg-teal-600 text-white rounded-lg hover:bg-teal-800 dark:hover:bg-teal-500 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
             >Contacto
           </a>
         </li>
       </ul>
 
-      <!-- MOBILE MENU BUTTON -->
-      <button
-        id="menu-toggle"
-        class="md:hidden p-3 -mr-3 text-slate-600 hover:text-teal-900 active:bg-slate-100 rounded-lg transition-colors touch-manipulation"
-        aria-label="Toggle Menu"
-        aria-expanded="false"
-      >
-        <svg
-          id="menu-icon"
-          class="w-6 h-6 transition-transform duration-200"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+      <div class="flex items-center gap-2">
+        <!-- THEME TOGGLE -->
+        <button
+          id="theme-toggle"
+          class="p-3 text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors touch-manipulation"
+          aria-label="Cambiar tema"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
+          <!-- Sun icon -->
+          <svg
+            id="theme-toggle-light-icon"
+            class="w-5 h-5 hidden dark:block"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd"
+              clip-rule="evenodd"></path>
+          </svg>
+          <!-- Moon icon -->
+          <svg
+            id="theme-toggle-dark-icon"
+            class="w-5 h-5 block dark:hidden"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+            ></path>
+          </svg>
+        </button>
 
-    <!-- MOBILE MENU -->
+        <!-- MOBILE MENU BUTTON -->
+        <button
+          id="menu-toggle"
+          class="md:hidden p-3 -mr-3 text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 active:bg-slate-100 dark:active:bg-slate-800 rounded-lg transition-colors touch-manipulation"
+          aria-label="Toggle Menu"
+          aria-expanded="false"
+        >
+          <svg
+            id="menu-icon"
+            class="w-6 h-6 transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
 
-    <div
-      id="mobile-menu"
-      class="hidden md:hidden pt-6 pb-4 animate-fade-in-down"
-    >
-      <ul class="flex flex-col gap-2">
-        <li>
-          <a
-            href="#about"
-            class="block text-slate-600 hover:text-teal-900 hover:bg-teal-50 transition-all px-4 py-3 rounded-lg font-medium active:bg-teal-100 touch-manipulation"
-            >Sobre mí
-          </a>
-        </li>
-        <li>
-          <a
-            href="#experience"
-            class="block text-slate-600 hover:text-teal-900 hover:bg-teal-50 transition-all px-4 py-3 rounded-lg font-medium active:bg-teal-100 touch-manipulation"
-            >Experiencia
-          </a>
-        </li>
-        <li>
-          <a
-            href="#projects"
-            class="block text-slate-600 hover:text-teal-900 hover:bg-teal-50 transition-all px-4 py-3 rounded-lg font-medium active:bg-teal-100 touch-manipulation"
-            >Proyectos
-          </a>
-        </li>
-        <li>
-          <a
-            href="#tech"
-            class="block text-slate-600 hover:text-teal-900 hover:bg-teal-50 transition-all px-4 py-3 rounded-lg font-medium active:bg-teal-100 touch-manipulation"
-            >Tecnologías
-          </a>
-        </li>
-        <li>
-          <a
-            href="#contact"
-            class="block text-white bg-teal-900 hover:bg-teal-800 transition-all px-4 py-3 rounded-lg font-medium text-center active:bg-teal-700 touch-manipulation"
-            >Contacto
-          </a>
-        </li>
-      </ul>
+      <!-- MOBILE MENU -->
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden pt-6 pb-4 animate-fade-in-down"
+      >
+        <ul class="flex flex-col gap-2">
+          <li>
+            <a
+              href="#about"
+              class="block text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800 transition-all px-4 py-3 rounded-lg font-medium active:bg-teal-100 dark:active:bg-slate-700 touch-manipulation"
+              >Sobre mí
+            </a>
+          </li>
+          <li>
+            <a
+              href="#experience"
+              class="block text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800 transition-all px-4 py-3 rounded-lg font-medium active:bg-teal-100 dark:active:bg-slate-700 touch-manipulation"
+              >Experiencia
+            </a>
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="block text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800 transition-all px-4 py-3 rounded-lg font-medium active:bg-teal-100 dark:active:bg-slate-700 touch-manipulation"
+              >Proyectos
+            </a>
+          </li>
+          <li>
+            <a
+              href="#tech"
+              class="block text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800 transition-all px-4 py-3 rounded-lg font-medium active:bg-teal-100 dark:active:bg-slate-700 touch-manipulation"
+              >Tecnologías
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="block text-white bg-teal-900 dark:bg-teal-600 hover:bg-teal-800 dark:hover:bg-teal-500 transition-all px-4 py-3 rounded-lg font-medium text-center active:bg-teal-700 dark:active:bg-teal-600 touch-manipulation"
+              >Contacto
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
-</header>
 
-<script>
-  const menuToggle = document.getElementById("menu-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const header = document.getElementById("main-header");
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const header = document.getElementById("main-header");
+      const themeToggle = document.getElementById("theme-toggle");
 
-  // Mobile menu toggle with animation and accessibility
-  menuToggle?.addEventListener("click", () => {
-    const isHidden = mobileMenu?.classList.contains("hidden");
-    if (isHidden) {
-      mobileMenu?.classList.remove("hidden");
-      setTimeout(() => mobileMenu?.classList.add("animate-fade-in-down"), 10);
-      menuToggle?.setAttribute("aria-expanded", "true");
-      // Prevent body scroll when menu is open
-      document.body.style.overflow = "hidden";
-    } else {
-      mobileMenu?.classList.add("hidden");
-      menuToggle?.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
-    }
-  });
-
-  // Close mobile menu on link click
-  const mobileLinks = mobileMenu?.querySelectorAll("a");
-  mobileLinks?.forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu?.classList.add("hidden");
-      menuToggle?.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
-    });
-  });
-
-  // Close mobile menu on escape key
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !mobileMenu?.classList.contains("hidden")) {
-      mobileMenu?.classList.add("hidden");
-      menuToggle?.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
-    }
-  });
-
-  // Close mobile menu when clicking outside
-  document.addEventListener("click", (e) => {
-    const target = e.target as Node;
-    if (
-      !mobileMenu?.classList.contains("hidden") &&
-      !mobileMenu?.contains(target) &&
-      !menuToggle?.contains(target)
-    ) {
-      mobileMenu?.classList.add("hidden");
-      menuToggle?.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
-    }
-  });
-
-  // Hide header on scroll down, show on scroll up
-  let lastScroll = 0;
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
-
-    if (currentScroll <= 100) {
-      header?.classList.remove("-translate-y-full");
-      return;
-    }
-
-    if (currentScroll > lastScroll && currentScroll > 100) {
-      // Scrolling down
-      header?.classList.add("-translate-y-full");
-    } else {
-      // Scrolling up
-      header?.classList.remove("-translate-y-full");
-    }
-
-    lastScroll = currentScroll;
-  });
-
-  // Highlight active section in navigation
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll("nav a[href^='#']");
-
-  function highlightNav() {
-    let current = "";
-    sections.forEach((section) => {
-      if (section instanceof HTMLElement) {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop - 200) {
-          current = section.getAttribute("id") || "";
+      // Theme toggle functionality
+      function setTheme(theme) {
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("theme", "light");
         }
       }
-    });
 
-    navLinks.forEach((link) => {
-      link.classList.remove("text-teal-900", "font-semibold");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("text-teal-900", "font-semibold");
+      // Theme toggle button click
+      if (themeToggle) {
+        themeToggle.addEventListener("click", function () {
+          const isDark = document.documentElement.classList.contains("dark");
+          setTheme(isDark ? "light" : "dark");
+        });
       }
-    });
-  }
 
-  window.addEventListener("scroll", highlightNav);
-</script>
+      // Mobile menu toggle with animation and accessibility
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", function () {
+          const isHidden = mobileMenu.classList.contains("hidden");
+          if (isHidden) {
+            mobileMenu.classList.remove("hidden");
+            setTimeout(
+              () => mobileMenu.classList.add("animate-fade-in-down"),
+              10,
+            );
+            menuToggle.setAttribute("aria-expanded", "true");
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = "hidden";
+          } else {
+            mobileMenu.classList.add("hidden");
+            menuToggle.setAttribute("aria-expanded", "false");
+            document.body.style.overflow = "";
+          }
+        });
+      }
+
+      // Close mobile menu on link click
+      const mobileLinks = mobileMenu?.querySelectorAll("a");
+      if (mobileLinks) {
+        mobileLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (mobileMenu) {
+              mobileMenu.classList.add("hidden");
+            }
+            if (menuToggle) {
+              menuToggle.setAttribute("aria-expanded", "false");
+            }
+            document.body.style.overflow = "";
+          });
+        });
+      }
+
+      // Close mobile menu on escape key
+      document.addEventListener("keydown", function (e) {
+        if (
+          e.key === "Escape" &&
+          mobileMenu &&
+          !mobileMenu.classList.contains("hidden")
+        ) {
+          mobileMenu.classList.add("hidden");
+          if (menuToggle) {
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+          document.body.style.overflow = "";
+        }
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (e) {
+        const target = e.target;
+        if (
+          mobileMenu &&
+          !mobileMenu.classList.contains("hidden") &&
+          !mobileMenu.contains(target) &&
+          !menuToggle?.contains(target) &&
+          !themeToggle?.contains(target)
+        ) {
+          mobileMenu.classList.add("hidden");
+          if (menuToggle) {
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+          document.body.style.overflow = "";
+        }
+      });
+
+      // Hide header on scroll down, show on scroll up
+      let lastScroll = 0;
+      window.addEventListener("scroll", function () {
+        const currentScroll = window.scrollY;
+
+        if (currentScroll <= 100) {
+          header?.classList.remove("-translate-y-full");
+          return;
+        }
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          // Scrolling down
+          header?.classList.add("-translate-y-full");
+        } else {
+          // Scrolling up
+          header?.classList.remove("-translate-y-full");
+        }
+
+        lastScroll = currentScroll;
+      });
+
+      // Highlight active section in navigation
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll("nav a[href^='#']");
+
+      function highlightNav() {
+        let current = "";
+        sections.forEach(function (section) {
+          if (section instanceof HTMLElement) {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= sectionTop - 200) {
+              current = section.getAttribute("id") || "";
+            }
+          }
+        });
+
+        navLinks.forEach(function (link) {
+          link.classList.remove("text-teal-900", "font-semibold");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("text-teal-900", "font-semibold");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", highlightNav);
+    });
+  </script>
+</header>
