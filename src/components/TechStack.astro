@@ -1,1 +1,117 @@
-<h1>Stack</h1>
+---
+const techCategories = [
+  {
+    name: "Lenguajes",
+    icon: "💡",
+    skills: "javascript,typescript,python,csharp,dart,java",
+  },
+  {
+    name: "Frontend",
+    icon: "💻",
+    skills:
+      "html,css3,sass,tailwind,materialui,daisyui,vite,angular,vue,react,nuxt",
+  },
+  {
+    name: "Mobile",
+    icon: "📱",
+    skills: "flutter,android",
+  },
+  {
+    name: "Backend & APIs",
+    icon: "🧠",
+    skills:
+      "bun,nestjs,nodejs,express,dotnet,django,graphql,apollo,jwt,stripe,twilio",
+  },
+  {
+    name: "Databases",
+    icon: "🗄️",
+    skills: "sqlserver,postgresql,sqlite,mongodb,prisma",
+  },
+  {
+    name: "DevOps & Cloud",
+    icon: "⚙️",
+    skills: "docker,kubernetes,gcp,azure,netlify,render,nginx",
+  },
+  {
+    name: "Testing & Tools",
+    icon: "🧪",
+    skills: "jest,vitest,postman,git,github,vscode",
+  },
+];
+---
+
+<section id="tech" class="py-20 px-6 bg-slate-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12 animate-fade-in-up">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">Stack Tecnológico</h2>
+      <div class="w-20 h-1 bg-teal-900 mx-auto mb-6"></div>
+      <p class="text-slate-600 max-w-2xl mx-auto">
+        Tecnologías y herramientas que utilizo para construir soluciones
+        robustas y escalables
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      {
+        techCategories.map((category, index) => (
+          <div
+            class="bg-white p-6 rounded-xl border border-slate-200 hover:border-teal-200 hover:shadow-lg transition-all animate-fade-up"
+            style={`animation-delay: ${index * 100}ms`}
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-3xl">{category.icon}</span>
+              <h3 class="text-xl font-bold text-slate-900">{category.name}</h3>
+            </div>
+
+            <div class="flex items-center justify-center">
+              <img
+                src={`https://skills.syvixor.com/api/icons?i=${category.skills}`}
+                alt={category.name}
+                class="h-8"
+              />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- DEVCRAFTERS CTA -->
+    <div
+      class="mt-12 text-center bg-linear-to-r from-teal-50 to-sky-50 p-8 rounded-xl border border-teal-200 animate-fade-up"
+    >
+      <div class="flex justify-center mb-4">
+        <img
+          src="/images/logos/devcrafters.png"
+          alt="DevCrafters Logo"
+          class="h-12"
+        />
+      </div>
+      <h3 class="text-2xl font-bold text-slate-900 mb-3">
+        Co-fundador de DevCrafters
+      </h3>
+      <p class="text-slate-600 mb-6 max-w-2xl mx-auto">
+        Soluciones modernas en web, móvil y cloud para impulsar tu negocio
+      </p>
+      <a
+        href="https://devcrafters.dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-teal-900 text-white rounded-lg hover:bg-teal-800 transition-all hover:scale-105 font-medium"
+      >
+        Visitar DevCrafters
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
