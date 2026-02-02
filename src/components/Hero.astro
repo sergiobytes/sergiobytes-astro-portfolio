@@ -1,11 +1,14 @@
 <section
   id="home"
-  class="min-h-screen flex items-center justify-center px-6 pt-20"
+  class="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-20"
 >
   <div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
       <!-- TEXT -->
-      <div class="space-y-6 animate-fade-in-right">
+      <div
+        class="space-y-4 sm:space-y-5 md:space-y-6 animate-fade-in-right"
+        data-reveal
+      >
         <div class="inline-block">
           <span
             class="px-4 py-2 bg-teal-50 text-teal-900 rounded-full text-sm font-medium border border-teal-200"
@@ -14,43 +17,47 @@
           </span>
         </div>
 
-        <h1 class="text-5xl md:text-6xl font-bold text-slate-900 leading-tight">
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 leading-tight"
+        >
           Hola, soy
           <span class="text-teal-900">Sergio Barreras</span>
         </h1>
 
-        <p class="text-2xl text-slate-600 font-medium">Full Stack Developer</p>
+        <p class="text-xl sm:text-2xl text-slate-600 font-medium">
+          Full Stack Developer
+        </p>
 
-        <p class="text-lg text-slate-600 leading-relaxed">
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
           Especializado en crear aplicaciones web escalables con <strong
             >Angular</strong
           >, <strong>NestJS</strong> y <strong>TypeScript</strong>. Apasionado
           por la arquitectura limpia, experiencia de usuario y automatización.
         </p>
 
-        <div class="flex flex-wrap gap-4 pt-4">
+        <div class="flex flex-wrap gap-3 sm:gap-4 pt-4">
           <a
             href="#contact"
-            class="px-6 py-3 bg-teal-900 text-white rounded-lg hover:bg-teal-800 transition-all hover:scale-105 font-medium"
+            class="px-6 py-3 sm:px-6 sm:py-3 bg-teal-900 text-white rounded-lg hover:bg-teal-800 transition-all hover:scale-105 hover:shadow-lg font-medium focus:outline-none focus:ring-2 focus:ring-teal-900 focus:ring-offset-2 active:scale-95 text-center flex-1 sm:flex-initial touch-manipulation"
           >
             Contáctame
           </a>
           <a
             href="/cv/Sergio-Barreras-CV.pdf"
             download
-            class="px-6 py-3 border-2 border-slate-300 text-slate-700 rounded-lg hover:border-teal-900 hover:text-teal-900 transition-all font-medium"
+            class="px-6 py-3 sm:px-6 sm:py-3 border-2 border-slate-300 text-slate-700 rounded-lg hover:border-teal-900 hover:text-teal-900 transition-all hover:shadow-md font-medium focus:outline-none focus:ring-2 focus:ring-teal-900 focus:ring-offset-2 active:scale-95 text-center flex-1 sm:flex-initial touch-manipulation"
           >
             Descargar CV
           </a>
         </div>
 
         <!-- SOCIAL LINKS -->
-        <div class="flex gap-4 pt-4">
+        <div class="flex gap-3 sm:gap-4 pt-4">
           <a
             href="https://github.com/sergiobytes"
             target="_blank"
             rel="noopener noreferrer"
-            class="p-3 bg-slate-100 rounded-lg hover:bg-teal-50 hover:text-teal-900 transition-all"
+            class="p-3 bg-slate-100 rounded-lg hover:bg-teal-50 hover:text-teal-900 transition-all hover:scale-110 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-teal-900 focus:ring-offset-2"
             aria-label="GitHub"
           >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -63,7 +70,7 @@
             href="https://www.linkedin.com/in/sergio-barreras"
             target="_blank"
             rel="noopener noreferrer"
-            class="p-3 bg-slate-100 rounded-lg hover:bg-teal-50 hover:text-teal-900 transition-all"
+            class="p-3 bg-slate-100 rounded-lg hover:bg-teal-50 hover:text-teal-900 transition-all hover:scale-110 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-teal-900 focus:ring-offset-2"
             aria-label="LinkedIn"
           >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -74,7 +81,7 @@
           </a>
           <a
             href="mailto:sergiobg.isc@gmail.com"
-            class="p-3 bg-slate-100 rounded-lg hover:bg-teal-50 hover:text-teal-900 transition-all"
+            class="p-3 bg-slate-100 rounded-lg hover:bg-teal-50 hover:text-teal-900 transition-all hover:scale-110 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-teal-900 focus:ring-offset-2"
             aria-label="Email"
           >
             <svg
@@ -95,7 +102,7 @@
       </div>
 
       <!-- AVATAR -->
-      <div class="flex justify-center animate-fade-in-left">
+      <div class="flex justify-center animate-fade-in-left" data-reveal>
         <div class="relative">
           <!-- BACKGROUND CIRCLE -->
           <div
