@@ -1,25 +1,19 @@
 <script is:inline>
-  // Detect and redirect to correct language on first visit
+  // Detect browser language and set attribute for CSS targeting
   (function () {
     const savedLang = localStorage.getItem("lang");
     const browserLang = navigator.language.split("-")[0];
-
-    // Only run detection on first visit (no saved language)
-    if (!savedLang) {
-      const supportedLangs = ["es", "en"];
-      const detectedLang = supportedLangs.includes(browserLang)
-        ? browserLang
-        : "es";
-
-      // Save to localStorage
-      localStorage.setItem("lang", detectedLang);
-
-      // Redirect to set the language via URL (which sets the cookie on server)
-      const currentUrl = new URL(window.location.href);
-      if (currentUrl.searchParams.get("lang") !== detectedLang) {
-        currentUrl.searchParams.set("lang", detectedLang);
-        window.location.href = currentUrl.toString();
-      }
-    }
+    const supportedLangs = ["es", "en"];
+    
+    // Determine language: saved > browser > default
+    const detectedLang = savedLang || 
+      (supportedLangs.includes(browserLang) ? browserLang : "es");
+    
+    // Save to localStorage
+    localStorage.setItem("lang", detectedLang);
+    
+    // Set HTML lang attribute immediately
+    document.documentElement.setAttribute("lang", detectedLang);
+    document.documentElement.setAttribute("data-lang", detectedLang);
   })();
 </script>

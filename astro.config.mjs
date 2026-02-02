@@ -1,13 +1,11 @@
 // @ts-check
 import { defineConfig } from "astro/config";
-import netlify from "@astrojs/netlify";
 
 import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server", // Enable SSR for all pages
-  adapter: netlify(),
+  output: "static", // Static site generation
   vite: {
     plugins: [tailwindcss()],
   },

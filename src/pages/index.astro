@@ -13,19 +13,9 @@ import { getTranslations, type Language } from "../i18n/translations";
 
 import "../styles/global.css";
 
-// Get language from URL param or cookie or default to Spanish
-const urlLang = Astro.url.searchParams.get("lang") as Language | null;
-const cookieLang = Astro.cookies.get("lang")?.value as Language | undefined;
-
-// If URL has lang param, save it to cookie
-if (urlLang && ["es", "en"].includes(urlLang)) {
-  Astro.cookies.set("lang", urlLang, {
-    path: "/",
-    maxAge: 60 * 60 * 24 * 365, // 1 year
-  });
-}
-
-const lang: Language = urlLang || cookieLang || "es";
+// Use default language (Spanish) for initial render
+// Client-side detection will handle language switching
+const lang: Language = "es";
 const t = getTranslations(lang);
 ---
 
