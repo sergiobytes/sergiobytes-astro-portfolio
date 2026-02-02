@@ -36,11 +36,83 @@ export const translations = {
     experience: {
       title: "Experiencia",
       remote: "Remoto desde",
+      experiences: [
+        {
+          company: "Creative Software International",
+          role: "Full Stack Developer",
+          period: "Jul 2025 - Oct 2025",
+          location: "Remoto desde Aguascalientes, Ags.",
+          highlights: [
+            "Diseñé y mejoré esquemas de base de datos para permisos granulares",
+            "Implementé reglas avanzadas para flujos de trabajo delegados",
+            "Resolví deadlocks en Work Orders refactorizando lógica transaccional",
+            "Automaticé segmentación de correos y corregí inconsistencias CRUD",
+          ],
+        },
+        {
+          company: "Taruks Soluciones S.A. de C.V.",
+          role: "Full Stack Developer",
+          period: "Dic 2022 - Ago 2024",
+          location: "Ciudad Obregón, Sonora",
+          highlights: [
+            "Desarrollé aplicaciones Angular con principios de Clean Architecture",
+            "Integré REST APIs e implementé formularios reactivos con RxJS",
+            "Participé en ceremonias Scrum y revisiones de código",
+            "Entregué interfaces responsivas alineadas con mejores prácticas UX",
+          ],
+        },
+      ],
     },
     projects: {
       title: "Proyectos",
       demo: "Ver Demo",
       github: "GitHub",
+      items: [
+        {
+          name: "BotBite",
+          tagline: "Asistente IA de Mesero para Restaurantes",
+          description:
+            "Plataforma SaaS que permite a clientes ordenar comida vía WhatsApp usando IA conversacional. Arquitectura multi-restaurante con QR dinámicos.",
+          image: "/images/projects/botbite.png",
+          logo: "/images/logos/botbite.png",
+          tech: "angular,tailwind,rxjs,websockets,nestjs,postgresql,redis,chatgpt,twilio,cloudinary,render",
+          links: {
+            demo: "https://botbite.com.mx",
+            github: "https://github.com/sergiobytes/botbite-waiter-app",
+          },
+          featured: true,
+        },
+        {
+          name: "Diócesis de Cd. Obregón",
+          tagline: "Plataforma Administrativa y Pública",
+          description:
+            "Sistema administrativo para parroquias y decanatos con navegación basada en roles, formularios reactivos y layouts responsivos.",
+          image: "/images/projects/diocesis.png",
+          logo: "/images/logos/diocesis-logo.png",
+          tech: "angular,tailwind,rxjs,django,postgresql,cloudinary,render",
+          links: {
+            demo: "https://diocesisdeciudadobregon.org/inicio",
+            github:
+              "https://github.com/Sergio-Frontend-Projects/diocesis-frontend-material",
+          },
+          featured: true,
+        },
+        {
+          name: "Pastelería Magnolias",
+          tagline: "Plataforma de E-commerce",
+          description:
+            "Plataforma de comercio electrónico para pastelería artesanal con catálogo interactivo, carrito de compras y gestión de pedidos.",
+          image:
+            "https://placehold.co/1919x908/EEE/31343C?font=montserrat&text=Building",
+          logo: "/images/logos/magnolias.png",
+          tech: "vue,nestjs,postgresql,cloudinary,render",
+          links: {
+            github:
+              "https://github.com/DevCraftersEnterprise/magnolias-backend",
+          },
+          featured: true,
+        },
+      ],
     },
     tech: {
       title: "Stack Tecnológico",
@@ -115,11 +187,83 @@ export const translations = {
     experience: {
       title: "Experience",
       remote: "Remote from",
+      experiences: [
+        {
+          company: "Creative Software International",
+          role: "Full Stack Developer",
+          period: "Jul 2025 - Oct 2025",
+          location: "Remote from Aguascalientes, Ags.",
+          highlights: [
+            "Designed and improved database schemas for granular permissions",
+            "Implemented advanced rules for delegated workflows",
+            "Resolved Work Orders deadlocks by refactoring transactional logic",
+            "Automated email segmentation and fixed CRUD inconsistencies",
+          ],
+        },
+        {
+          company: "Taruks Soluciones S.A. de C.V.",
+          role: "Full Stack Developer",
+          period: "Dec 2022 - Aug 2024",
+          location: "Ciudad Obregón, Sonora",
+          highlights: [
+            "Developed Angular applications with Clean Architecture principles",
+            "Integrated REST APIs and implemented reactive forms with RxJS",
+            "Participated in Scrum ceremonies and code reviews",
+            "Delivered responsive interfaces aligned with UX best practices",
+          ],
+        },
+      ],
     },
     projects: {
       title: "Projects",
       demo: "View Demo",
       github: "GitHub",
+      items: [
+        {
+          name: "BotBite",
+          tagline: "AI Waiter Assistant for Restaurants",
+          description:
+            "SaaS platform that allows customers to order food via WhatsApp using conversational AI. Multi-restaurant architecture with dynamic QR codes.",
+          image: "/images/projects/botbite.png",
+          logo: "/images/logos/botbite.png",
+          tech: "angular,tailwind,rxjs,websockets,nestjs,postgresql,redis,chatgpt,twilio,cloudinary,render",
+          links: {
+            demo: "https://botbite.com.mx",
+            github: "https://github.com/sergiobytes/botbite-waiter-app",
+          },
+          featured: true,
+        },
+        {
+          name: "Diocese of Cd. Obregón",
+          tagline: "Administrative & Public Platform",
+          description:
+            "Administrative system for parishes and deaneries with role-based navigation, reactive forms, and responsive layouts.",
+          image: "/images/projects/diocesis.png",
+          logo: "/images/logos/diocesis-logo.png",
+          tech: "angular,tailwind,rxjs,django,postgresql,cloudinary,render",
+          links: {
+            demo: "https://diocesisdeciudadobregon.org/inicio",
+            github:
+              "https://github.com/Sergio-Frontend-Projects/diocesis-frontend-material",
+          },
+          featured: true,
+        },
+        {
+          name: "Magnolias Bakery",
+          tagline: "E-commerce Platform",
+          description:
+            "E-commerce platform for artisan bakery with interactive catalog, shopping cart, and order management.",
+          image:
+            "https://placehold.co/1919x908/EEE/31343C?font=montserrat&text=Building",
+          logo: "/images/logos/magnolias.png",
+          tech: "vue,nestjs,postgresql,cloudinary,render",
+          links: {
+            github:
+              "https://github.com/DevCraftersEnterprise/magnolias-backend",
+          },
+          featured: true,
+        },
+      ],
     },
     tech: {
       title: "Tech Stack",

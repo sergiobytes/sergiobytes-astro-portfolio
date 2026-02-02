@@ -7,33 +7,7 @@ interface Props {
 
 const { lang = "es" } = Astro.props;
 const t = getTranslations(lang);
-
-const experiences = [
-  {
-    company: "Creative Software International",
-    role: "Full Stack Developer",
-    period: "Jul 2025 - Oct 2025",
-    location: "Remoto desde Aguascalientes, Ags.",
-    highlights: [
-      "Diseñé y mejoré esquemas de base de datos para permisos granulares",
-      "Implementé reglas avanzadas para flujos de trabajo delegados",
-      "Resolví deadlocks en Work Orders refactorizando lógica transaccional",
-      "Automaticé segmentación de correos y corregí inconsistencias CRUD",
-    ],
-  },
-  {
-    company: "Taruks Soluciones S.A. de C.V.",
-    role: "Full Stack Developer",
-    period: "Dic 2022 - Ago 2024",
-    location: "Ciudad Obregón, Sonora",
-    highlights: [
-      "Desarrollé aplicaciones Angular con principios de Clean Architecture",
-      "Integré REST APIs e implementé formularios reactivos con RxJS",
-      "Participé en ceremonias Scrum y revisiones de código",
-      "Entregué interfaces responsivas alineadas con mejores prácticas UX",
-    ],
-  },
-];
+const experiences = t.experience.experiences;
 ---
 
 <section

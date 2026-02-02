@@ -7,52 +7,7 @@ interface Props {
 
 const { lang = "es" } = Astro.props;
 const t = getTranslations(lang);
-
-const projects = [
-  {
-    name: "BotBite",
-    tagline: "AI Waiter Assistant for Restaurants",
-    description:
-      "Plataforma SaaS que permite a clientes ordenar comida vía WhatsApp usando IA conversacional. Arquitectura multi-restaurante con QR dinámicos.",
-    image: "/images/projects/botbite.png",
-    logo: "/images/logos/botbite.png",
-    tech: "angular,tailwind,rxjs,websockets,nestjs,postgresql,redis,chatgpt,twilio,cloudinary,render",
-    links: {
-      demo: "https://botbite.com.mx",
-      github: "https://github.com/sergiobytes/botbite-waiter-app",
-    },
-    featured: true,
-  },
-  {
-    name: "Diócesis de Cd. Obregón",
-    tagline: "Administrative & Public Platform",
-    description:
-      "Sistema administrativo para parroquias y decanatos con navegación basada en roles, formularios reactivos y layouts responsivos.",
-    image: "/images/projects/diocesis.png",
-    logo: "/images/logos/diocesis-logo.png",
-    tech: "angular,tailwind,rxjs,django,postgresql,cloudinary,render",
-    links: {
-      demo: "https://diocesisdeciudadobregon.org/inicio",
-      github:
-        "https://github.com/Sergio-Frontend-Projects/diocesis-frontend-material",
-    },
-    featured: true,
-  },
-  {
-    name: "Pastelería Magnolias",
-    tagline: "E-commerce Platform",
-    description:
-      "Plataforma de comercio electrónico para pastelería artesanal con catálogo interactivo, carrito de compras y gestión de pedidos.",
-    image:
-      "https://placehold.co/1919x908/EEE/31343C?font=montserrat&text=Building",
-    logo: "/images/logos/magnolias.png",
-    tech: "vue,nestjs,postgresql,cloudinary,render",
-    links: {
-      github: "https://github.com/DevCraftersEnterprise/magnolias-backend",
-    },
-    featured: true,
-  },
-];
+const projects = t.projects.items;
 ---
 
 <section
@@ -91,7 +46,7 @@ const projects = [
 
               {/* LOGO OVERLAY */}
               {project.logo && (
-                <div class="absolute top-4 left-4 bg-white dark:bg-slate-900 p-3 rounded-lg shadow-md border dark:border-slate-700">
+                <div class="absolute top-4 left-4 bg-white p-3 rounded-lg shadow-md border dark:border-slate-700">
                   <img
                     src={project.logo}
                     alt={`${project.name} Logo`}
