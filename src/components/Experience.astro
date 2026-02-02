@@ -1,5 +1,6 @@
 ---
 import { getTranslations, type Language } from "../i18n/translations";
+import SectionHeader from "./common/SectionHeader.astro";
 
 interface Props {
   lang?: Language;
@@ -15,17 +16,7 @@ const experiences = t.experience.experiences;
   class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-slate-50 dark:bg-slate-950"
 >
   <div class="max-w-6xl mx-auto">
-    <div
-      class="text-center mb-8 sm:mb-10 md:mb-12 animate-fade-in-up"
-      data-reveal
-    >
-      <h2
-        class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4"
-      >
-        {t.experience.title}
-      </h2>
-      <div class="w-20 h-1 bg-teal-900 dark:bg-teal-400 mx-auto"></div>
-    </div>
+    <SectionHeader title={t.experience.title} />
 
     <div class="space-y-6 sm:space-y-8">
       {

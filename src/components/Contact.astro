@@ -1,5 +1,6 @@
 ---
 import { getTranslations, type Language } from "../i18n/translations";
+import SectionHeader from "./common/SectionHeader.astro";
 
 interface Props {
   lang?: Language;
@@ -14,20 +15,7 @@ const t = getTranslations(lang);
   class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white dark:bg-slate-900"
 >
   <div class="max-w-4xl mx-auto">
-    <div
-      class="text-center mb-8 sm:mb-10 md:mb-12 animate-fade-in-up"
-      data-reveal
-    >
-      <h2
-        class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4"
-      >
-        {t.contact.title}
-      </h2>
-      <div class="w-20 h-1 bg-teal-900 dark:bg-teal-600 mx-auto mb-6"></div>
-      <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300">
-        {t.contact.description}
-      </p>
-    </div>
+    <SectionHeader title={t.contact.title} subtitle={t.contact.description} />
 
     <div class="grid md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12">
       <!-- EMAIL -->
