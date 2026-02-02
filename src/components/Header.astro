@@ -161,6 +161,20 @@
     }
   });
 
+  // Close mobile menu when clicking outside
+  document.addEventListener("click", (e) => {
+    const target = e.target as Node;
+    if (
+      !mobileMenu?.classList.contains("hidden") &&
+      !mobileMenu?.contains(target) &&
+      !menuToggle?.contains(target)
+    ) {
+      mobileMenu?.classList.add("hidden");
+      menuToggle?.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }
+  });
+
   // Hide header on scroll down, show on scroll up
   let lastScroll = 0;
   window.addEventListener("scroll", () => {
