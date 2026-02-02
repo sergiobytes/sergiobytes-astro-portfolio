@@ -1,1 +1,81 @@
-<h1>Experience</h1>
+---
+const experiences = [
+  {
+    company: "Creative Software International",
+    role: "Full Stack Developer",
+    period: "Jul 2025 - Oct 2025",
+    location: "Remoto desde Aguascalientes, Ags.",
+    highlights: [
+      "Diseñé y mejoré esquemas de base de datos para permisos granulares",
+      "Implementé reglas avanzadas para flujos de trabajo delegados",
+      "Resolví deadlocks en Work Orders refactorizando lógica transaccional",
+      "Automaticé segmentación de correos y corregí inconsistencias CRUD",
+    ],
+  },
+  {
+    company: "Taruks Soluciones S.A. de C.V.",
+    role: "Full Stack Developer",
+    period: "Dic 2022 - Ago 2024",
+    location: "Ciudad Obregón, Sonora",
+    highlights: [
+      "Desarrollé aplicaciones Angular con principios de Clean Architecture",
+      "Integré REST APIs e implementé formularios reactivos con RxJS",
+      "Participé en ceremonias Scrum y revisiones de código",
+      "Entregué interfaces responsivas alineadas con mejores prácticas UX",
+    ],
+  },
+];
+---
+
+<section id="experience" class="py-20 px-6 bg-slate-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12 animate-fade-in-up">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">Experiencia</h2>
+      <div class="w-20 h-1 bg-teal-900 mx-auto"></div>
+    </div>
+
+    <div class="space-y-8">
+      {
+        experiences.map((exp, index) => (
+          <div
+            class="bg-white p-8 rounded-xl border border-slate-200 hover:border-teal-200 hover:shadow-lg transition-all animate-fade-in-up"
+            style={`animation-delay: ${index * 100}ms`}
+          >
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-1">
+                  {exp.role}
+                </h3>
+                <p class="text-lg text-teal-900 font-medium">{exp.company}</p>
+              </div>
+
+              <div class="mt-2 md:mt-0 text-slate-600">
+                <p class="font-medium">{exp.period}</p>
+                <p class="text-sm">{exp.location}</p>
+              </div>
+            </div>
+
+            <ul class="space-y-3 mt-6">
+              {exp.highlights.map((hightlight) => (
+                <li class="flex items-start gap-3 text-slate-600">
+                  <svg
+                    class="w-5 h-5 text-teal-900 shrink-0 mt-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>{hightlight}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
