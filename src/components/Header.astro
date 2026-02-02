@@ -13,18 +13,18 @@ const t = getTranslations(lang);
   id="main-header"
   class="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-700 animate-fade-in-down transition-transform duration-300"
 >
-  <nav class="max-w-6xl mx-auto px-6 py-4">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
     <div class="flex items-center justify-between">
       <!-- LOGO/NAME -->
       <a
         href="#home"
-        class="text-xl font-bold text-slate-900 dark:text-white hover:text-teal-700 dark:hover:text-teal-400 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-400 focus:ring-offset-2 rounded"
+        class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white hover:text-teal-700 dark:hover:text-teal-400 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-400 focus:ring-offset-2 rounded"
       >
         Sergio <span class="text-teal-900 dark:text-teal-400">Barreras</span>
       </a>
 
       <!-- DESKTOP NAVIGATION -->
-      <ul class="hidden md:flex items-center gap-8">
+      <ul class="hidden md:flex items-center gap-6 lg:gap-8">
         <li>
           <a
             href="#about"
@@ -62,11 +62,11 @@ const t = getTranslations(lang);
         </li>
       </ul>
 
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-1 sm:gap-2">
         <!-- THEME TOGGLE -->
         <button
           id="theme-toggle"
-          class="p-3 text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors touch-manipulation"
+          class="p-2 sm:p-3 text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors touch-manipulation"
           aria-label="Cambiar tema"
         >
           <!-- Sun icon -->
@@ -97,7 +97,7 @@ const t = getTranslations(lang);
         <!-- MOBILE MENU BUTTON -->
         <button
           id="menu-toggle"
-          class="md:hidden p-3 -mr-3 text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 active:bg-slate-100 dark:active:bg-slate-800 rounded-lg transition-colors touch-manipulation"
+          class="md:hidden p-2 sm:p-3 text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 active:bg-slate-100 dark:active:bg-slate-800 rounded-lg transition-colors touch-manipulation"
           aria-label="Toggle Menu"
           aria-expanded="false"
         >
@@ -116,51 +116,50 @@ const t = getTranslations(lang);
           </svg>
         </button>
       </div>
+    </div>
 
-      <!-- MOBILE MENU -->
-
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden pt-6 pb-4 animate-fade-in-down"
-      >
-        <ul class="flex flex-col gap-2">
-          <li>
-            <a
-              href="#about"
-              class="block text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800 transition-all px-4 py-3 rounded-lg font-medium active:bg-teal-100 dark:active:bg-slate-700 touch-manipulation"
-              >{t.nav.about}
-            </a>
-          </li>
-          <li>
-            <a
-              href="#experience"
-              class="block text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800 transition-all px-4 py-3 rounded-lg font-medium active:bg-teal-100 dark:active:bg-slate-700 touch-manipulation"
-              >{t.nav.experience}
-            </a>
-          </li>
-          <li>
-            <a
-              href="#projects"
-              class="block text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800 transition-all px-4 py-3 rounded-lg font-medium active:bg-teal-100 dark:active:bg-slate-700 touch-manipulation"
-              >{t.nav.projects}
-            </a>
-          </li>
-          <li>
-            <a
-              href="#tech"
-              class="block text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800 transition-all px-4 py-3 rounded-lg font-medium active:bg-teal-100 dark:active:bg-slate-700 touch-manipulation"
-              >{t.nav.tech}
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              class="block text-white bg-teal-900 dark:bg-teal-600 hover:bg-teal-800 dark:hover:bg-teal-500 transition-all px-4 py-3 rounded-lg font-medium text-center active:bg-teal-700 dark:active:bg-teal-600 touch-manipulation"
-              >{t.nav.contact}
-            </a>
-          </li>
-        </ul>
-      </div>
+    <!-- MOBILE MENU (outside flex container) -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden pt-4 pb-3 animate-fade-in-down"
+    >
+      <ul class="flex flex-col gap-1.5">
+        <li>
+          <a
+            href="#about"
+            class="block text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800 transition-all px-3 py-2.5 rounded-lg font-medium active:bg-teal-100 dark:active:bg-slate-700 touch-manipulation"
+            >{t.nav.about}
+          </a>
+        </li>
+        <li>
+          <a
+            href="#experience"
+            class="block text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800 transition-all px-3 py-2.5 rounded-lg font-medium active:bg-teal-100 dark:active:bg-slate-700 touch-manipulation"
+            >{t.nav.experience}
+          </a>
+        </li>
+        <li>
+          <a
+            href="#projects"
+            class="block text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800 transition-all px-3 py-2.5 rounded-lg font-medium active:bg-teal-100 dark:active:bg-slate-700 touch-manipulation"
+            >{t.nav.projects}
+          </a>
+        </li>
+        <li>
+          <a
+            href="#tech"
+            class="block text-slate-600 dark:text-slate-300 hover:text-teal-900 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800 transition-all px-3 py-2.5 rounded-lg font-medium active:bg-teal-100 dark:active:bg-slate-700 touch-manipulation"
+            >{t.nav.tech}
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="block text-white bg-teal-900 dark:bg-teal-600 hover:bg-teal-800 dark:hover:bg-teal-500 transition-all px-3 py-2.5 rounded-lg font-medium text-center active:bg-teal-700 dark:active:bg-teal-600 touch-manipulation"
+            >{t.nav.contact}
+          </a>
+        </li>
+      </ul>
     </div>
   </nav>
 
