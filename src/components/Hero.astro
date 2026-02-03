@@ -34,10 +34,11 @@ const t = getTranslations(lang);
 
         <h1
           class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-white leading-tight"
-          data-i18n="hero.greeting"
         >
-          {t.hero.greeting}
-          <span class="text-teal-900 dark:text-teal-400">Sergio Barreras</span>
+          <span data-i18n="hero.greeting">{t.hero.greeting}</span>
+          <span class="block text-teal-600 dark:text-teal-400"
+            >Sergio Barreras</span
+          >
         </h1>
 
         <p
