@@ -378,6 +378,37 @@
     );
     if (certsLearningLabel)
       certsLearningLabel.textContent = t.certifications.stats.learningLabel;
+
+    // Update certification dates
+    const formatDate = (dateStr: string, language: "es" | "en") => {
+      if (!dateStr) return "";
+
+      try {
+        // Parse components to avoid UTC timezone issues
+        const [year, month, day] = dateStr.split("-").map(Number);
+        const date = new Date(year, month - 1, day);
+        const options: Intl.DateTimeFormatOptions = {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        };
+
+        return new Intl.DateTimeFormat(
+          language === "es" ? "es-ES" : "en-US",
+          options,
+        ).format(date);
+      } catch {
+        return dateStr;
+      }
+    };
+
+    const certDates = document.querySelectorAll("[data-cert-date]");
+    certDates.forEach((el) => {
+      const dateStr = el.getAttribute("data-cert-date");
+      if (dateStr) {
+        el.textContent = formatDate(dateStr, lang);
+      }
+    });
   }
 
   // Initialize language on page load

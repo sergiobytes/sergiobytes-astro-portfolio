@@ -10,6 +10,29 @@ interface Props {
 const { lang = "en" } = Astro.props;
 const t = getTranslations(lang);
 const certsByYear = getCertificationsByYear();
+
+// Function to format date based on language
+const formatDate = (dateStr: string, language: Language) => {
+  if (!dateStr) return "";
+
+  try {
+    // Parse components to avoid UTC timezone issues
+    const [year, month, day] = dateStr.split("-").map(Number);
+    const date = new Date(year, month - 1, day);
+    const options: Intl.DateTimeFormatOptions = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+
+    return new Intl.DateTimeFormat(
+      language === "es" ? "es-ES" : "en-US",
+      options,
+    ).format(date);
+  } catch {
+    return dateStr;
+  }
+};
 ---
 
 <section
@@ -41,25 +64,37 @@ const certsByYear = getCertificationsByYear();
                   data-reveal
                 >
                   <div class="flex items-start gap-4">
-                    <div class="shrink-0 w-10 h-10 bg-teal-100 dark:bg-teal-900/30 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <svg
-                        class="w-6 h-6 text-teal-900 dark:text-teal-400"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                        />
-                      </svg>
+                    <div class="shrink-0 w-10 h-10 bg-teal-100 dark:bg-teal-900/30 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform overflow-hidden">
+                      <img
+                        src={cert.icon}
+                        alt={cert.title}
+                        class="w-6 h-6 object-contain"
+                      />
                     </div>
                     <div class="flex-1 min-w-0">
-                      <h4 class="font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-teal-900 dark:group-hover:text-teal-400 transition-colors">
+                      <h4 class="font-semibold text-slate-900 dark:text-white mb-1 group-hover:text-teal-900 dark:group-hover:text-teal-400 transition-colors">
                         {cert.title}
                       </h4>
+                      {cert.date && (
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mb-2 flex items-center gap-1">
+                          <svg
+                            class="w-3 h-3"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                            />
+                          </svg>
+                          <span data-cert-date={cert.date}>
+                            {formatDate(cert.date, lang)}
+                          </span>
+                        </p>
+                      )}
                       <div class="flex items-center gap-2">
                         {cert.inProgress ? (
                           <span
