@@ -168,6 +168,12 @@ const t = getTranslations(lang);
         // Mostrar mensaje de éxito
         successMessage.classList.remove("hidden");
         form.reset();
+
+        // Ocultar mensaje después de 5 segundos
+        setTimeout(() => {
+          successMessage.classList.add("hidden");
+          formStatus.classList.add("hidden");
+        }, 5000);
       } else {
         throw new Error(data.message || "Error al enviar el formulario");
       }
