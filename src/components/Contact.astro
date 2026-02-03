@@ -1,6 +1,7 @@
 ---
 import { getTranslations, type Language } from "../i18n/translations";
 import SectionHeader from "./common/SectionHeader.astro";
+import ContactForm from "./ContactForm.astro";
 
 interface Props {
   lang?: Language;
@@ -24,6 +25,9 @@ const t = getTranslations(lang);
     <p class="hidden" data-i18n="contact.description">
       {t.contact.description}
     </p>
+
+    <!-- Contact Form -->
+    <ContactForm lang={lang} />
 
     <div class="grid md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12">
       <!-- EMAIL -->

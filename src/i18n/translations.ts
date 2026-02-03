@@ -146,6 +146,18 @@ export const translations = {
       ctaButton: "Envíame un email",
       linkedin: "LinkedIn",
       github: "GitHub",
+      form: {
+        name: "Nombre",
+        namePlaceholder: "Tu nombre",
+        email: "Email",
+        emailPlaceholder: "tu@email.com",
+        message: "Mensaje",
+        messagePlaceholder: "Cuéntame sobre tu proyecto...",
+        send: "Enviar mensaje",
+        sending: "Enviando...",
+        success: "¡Mensaje enviado! Te responderé pronto.",
+        error: "Error al enviar. Intenta de nuevo.",
+      },
     },
     footer: {
       description:
@@ -304,6 +316,18 @@ export const translations = {
       ctaButton: "Send me an email",
       linkedin: "LinkedIn",
       github: "GitHub",
+      form: {
+        name: "Name",
+        namePlaceholder: "Your name",
+        email: "Email",
+        emailPlaceholder: "your@email.com",
+        message: "Message",
+        messagePlaceholder: "Tell me about your project...",
+        send: "Send message",
+        sending: "Sending...",
+        success: "Message sent! I'll get back to you soon.",
+        error: "Error sending. Please try again.",
+      },
     },
     footer: {
       description:

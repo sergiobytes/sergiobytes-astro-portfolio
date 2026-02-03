@@ -238,6 +238,52 @@
     );
     if (contactGithub) contactGithub.textContent = t.contact.github;
 
+    // Update contact form
+    const formName = document.querySelector('[data-i18n="contact.form.name"]');
+    if (formName) formName.textContent = t.contact.form.name;
+
+    const formEmail = document.querySelector(
+      '[data-i18n="contact.form.email"]',
+    );
+    if (formEmail) formEmail.textContent = t.contact.form.email;
+
+    const formMessage = document.querySelector(
+      '[data-i18n="contact.form.message"]',
+    );
+    if (formMessage) formMessage.textContent = t.contact.form.message;
+
+    const formSend = document.querySelector('[data-i18n="contact.form.send"]');
+    if (formSend) formSend.textContent = t.contact.form.send;
+
+    const formSuccess = document.querySelector(
+      '[data-i18n="contact.form.success"]',
+    );
+    if (formSuccess) formSuccess.textContent = t.contact.form.success;
+
+    const formError = document.querySelector(
+      '[data-i18n="contact.form.error"]',
+    );
+    if (formError) formError.textContent = t.contact.form.error;
+
+    // Update form placeholders
+    const namePlaceholder = document.querySelector(
+      '[data-i18n-placeholder="contact.form.namePlaceholder"]',
+    ) as HTMLInputElement;
+    if (namePlaceholder)
+      namePlaceholder.placeholder = t.contact.form.namePlaceholder;
+
+    const emailPlaceholder = document.querySelector(
+      '[data-i18n-placeholder="contact.form.emailPlaceholder"]',
+    ) as HTMLInputElement;
+    if (emailPlaceholder)
+      emailPlaceholder.placeholder = t.contact.form.emailPlaceholder;
+
+    const messagePlaceholder = document.querySelector(
+      '[data-i18n-placeholder="contact.form.messagePlaceholder"]',
+    ) as HTMLTextAreaElement;
+    if (messagePlaceholder)
+      messagePlaceholder.placeholder = t.contact.form.messagePlaceholder;
+
     // Update experience section (dynamic content)
     t.experience.experiences.forEach((exp, index) => {
       const roleEl = document.querySelector(
