@@ -1,5 +1,6 @@
 ---
 import { getTranslations, type Language } from "../i18n/translations";
+import { Image } from "astro:assets";
 import SectionHeader from "./common/SectionHeader.astro";
 
 interface Props {
@@ -142,9 +143,11 @@ const techCategories = [
       data-reveal
     >
       <div class="flex justify-center mb-4">
-        <img
+        <Image
           src="/images/logos/devcrafters.png"
           alt="DevCrafters Logo"
+          width={48}
+          height={48}
           class="h-12"
         />
       </div>

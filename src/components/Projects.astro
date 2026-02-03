@@ -1,5 +1,6 @@
 ---
 import { getTranslations, type Language } from "../i18n/translations";
+import { Image } from "astro:assets";
 import SectionHeader from "./common/SectionHeader.astro";
 
 interface Props {
@@ -28,9 +29,11 @@ const projects = t.projects.items;
             {/* PROJECT IMAGE */}
             <div class="relative h-48 sm:h-56 md:h-64 bg-linear-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800 overflow-hidden">
               {project.image && (
-                <img
+                <Image
                   src={project.image}
                   alt={project.name}
+                  width={600}
+                  height={400}
                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               )}
@@ -38,9 +41,11 @@ const projects = t.projects.items;
               {/* LOGO OVERLAY */}
               {project.logo && (
                 <div class="absolute top-4 left-4 bg-white p-3 rounded-lg shadow-md border dark:border-slate-700">
-                  <img
+                  <Image
                     src={project.logo}
                     alt={`${project.name} Logo`}
+                    width={32}
+                    height={32}
                     class="w-8 h-8 object-contain"
                   />
                 </div>
