@@ -13,9 +13,20 @@ const experiences = t.experience.experiences;
 
 <section
   id="experience"
-  class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-slate-50 dark:bg-slate-950"
+  class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-slate-50 dark:bg-slate-950 relative"
 >
-  <div class="max-w-6xl mx-auto">
+  <!-- Gradient overlay at top -->
+  <div
+    class="absolute top-0 left-0 right-0 h-32 bg-linear-to-b from-slate-50 dark:from-slate-950 to-transparent pointer-events-none"
+  >
+  </div>
+  <!-- Gradient overlay at bottom -->
+  <div
+    class="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-b from-transparent to-white dark:to-slate-900 pointer-events-none"
+  >
+  </div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
     <SectionHeader title={t.experience.title} data-i18n="experience.title" />
 
     <div class="space-y-6 sm:space-y-8">

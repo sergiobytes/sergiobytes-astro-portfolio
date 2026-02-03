@@ -14,9 +14,20 @@ const projects = t.projects.items;
 
 <section
   id="projects"
-  class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white dark:bg-slate-900"
+  class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white dark:bg-slate-900 relative"
 >
-  <div class="max-w-6xl mx-auto">
+  <!-- Gradient overlay at top -->
+  <div
+    class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white dark:from-slate-900 to-transparent pointer-events-none"
+  >
+  </div>
+  <!-- Gradient overlay at bottom -->
+  <div
+    class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-slate-50 dark:to-slate-800 pointer-events-none"
+  >
+  </div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
     <SectionHeader title={t.projects.title} data-i18n="projects.title" />
 
     <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
