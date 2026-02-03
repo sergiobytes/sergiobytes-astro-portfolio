@@ -22,6 +22,9 @@
       .querySelectorAll('[data-i18n="nav.tech"]')
       .forEach((el) => (el.textContent = t.nav.tech));
     document
+      .querySelectorAll('[data-i18n="nav.certifications"]')
+      .forEach((el) => (el.textContent = t.nav.certifications));
+    document
       .querySelectorAll('[data-i18n="nav.contact"]')
       .forEach((el) => (el.textContent = t.nav.contact));
 
@@ -331,6 +334,50 @@
       );
       if (descriptionEl) descriptionEl.textContent = project.description;
     });
+
+    // Update certifications section
+    const certsTitle = document.querySelector(
+      '[data-i18n="certifications.title"]',
+    );
+    if (certsTitle) certsTitle.textContent = t.certifications.title;
+
+    const certsDescription = document.querySelector(
+      '[data-i18n="certifications.description"]',
+    );
+    if (certsDescription)
+      certsDescription.textContent = t.certifications.description;
+
+    const certsInProgress = document.querySelectorAll(
+      '[data-i18n="certifications.inProgress"]',
+    );
+    certsInProgress.forEach((el) => {
+      el.textContent = t.certifications.inProgress;
+    });
+
+    const certsViewCertificate = document.querySelectorAll(
+      '[data-i18n="certifications.viewCertificate"]',
+    );
+    certsViewCertificate.forEach((el) => {
+      el.textContent = t.certifications.viewCertificate;
+    });
+
+    const certsTotalLabel = document.querySelector(
+      '[data-i18n="certifications.stats.totalLabel"]',
+    );
+    if (certsTotalLabel)
+      certsTotalLabel.textContent = t.certifications.stats.totalLabel;
+
+    const certsYearsLabel = document.querySelector(
+      '[data-i18n="certifications.stats.yearsLabel"]',
+    );
+    if (certsYearsLabel)
+      certsYearsLabel.textContent = t.certifications.stats.yearsLabel;
+
+    const certsLearningLabel = document.querySelector(
+      '[data-i18n="certifications.stats.learningLabel"]',
+    );
+    if (certsLearningLabel)
+      certsLearningLabel.textContent = t.certifications.stats.learningLabel;
   }
 
   // Initialize language on page load

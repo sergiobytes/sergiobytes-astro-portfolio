@@ -5,6 +5,7 @@ export const translations = {
       experience: "Experiencia",
       projects: "Proyectos",
       tech: "Tecnologías",
+      certifications: "Certificaciones",
       contact: "Contacto",
     },
     hero: {
@@ -168,6 +169,21 @@ export const translations = {
       visitSite: "Visitar sitio",
       madeWith: "Hecho con Astro & Tailwind CSS.",
     },
+    certifications: {
+      title: "Certificaciones",
+      description:
+        "Compromiso continuo con el aprendizaje y la mejora profesional a través de cursos especializados.",
+      inProgress: "En progreso",
+      viewCertificate: "Ver certificado",
+      stats: {
+        total: "43",
+        totalLabel: "Certificaciones totales",
+        years: "4",
+        yearsLabel: "Años de aprendizaje",
+        learning: "∞",
+        learningLabel: "Aprendizaje continuo",
+      },
+    },
   },
   en: {
     nav: {
@@ -175,6 +191,7 @@ export const translations = {
       experience: "Experience",
       projects: "Projects",
       tech: "Technologies",
+      certifications: "Certifications",
       contact: "Contact",
     },
     hero: {
@@ -337,6 +354,21 @@ export const translations = {
       devCraftersDescription: "Modern solutions in web, mobile and cloud.",
       visitSite: "Visit site",
       madeWith: "Made with Astro & Tailwind CSS.",
+    },
+    certifications: {
+      title: "Certifications",
+      description:
+        "Continuous commitment to learning and professional growth through specialized courses.",
+      inProgress: "In Progress",
+      viewCertificate: "View certificate",
+      stats: {
+        total: "43",
+        totalLabel: "Total certifications",
+        years: "4",
+        yearsLabel: "Years of learning",
+        learning: "∞",
+        learningLabel: "Continuous learning",
+      },
     },
   },
 };
