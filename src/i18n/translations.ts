@@ -85,9 +85,10 @@ export const translations = {
         },
         {
           name: "Diócesis de Cd. Obregón",
-          tagline: "Plataforma Administrativa y Pública",
+          tagline:
+            "Infraestructura digital para la administración eclesiástica",
           description:
-            "Sistema administrativo para parroquias y decanatos con navegación basada en roles, formularios reactivos y layouts responsivos.",
+            "Plataforma de gestión multi-entidad con control de acceso basado en roles, arquitectura modular, formularios adaptativos e interfaz pública integrada.",
           image: "/images/projects/diocesis.png",
           logo: "/images/logos/diocesis-logo.png",
           tech: "angular,tailwind,rxjs,django,postgresql,cloudinary,render",
@@ -100,13 +101,12 @@ export const translations = {
         },
         {
           name: "Pastelería Magnolias",
-          tagline: "Plataforma de E-commerce",
+          tagline: "Arquitectura digital para pastelerías multi-sucursal",
           description:
-            "Plataforma de comercio electrónico para pastelería artesanal con catálogo interactivo, carrito de compras y gestión de pedidos.",
-          image:
-            "https://placehold.co/1919x908/EEE/31343C?font=montserrat&text=Building",
+            "Sistema integral para pastelería con gestión multi-sucursal, flujo estructurado de pedidos personalizados y panel administrativo con control por roles. Incluye landing pública sincronizada con el catálogo interno.",
+          image: "/images/projects/magnolias.png",
           logo: "/images/logos/magnolias.png",
-          tech: "vue,nestjs,postgresql,cloudinary,render",
+          tech: "nuxt,nestjs,postgresql,cloudinary,render",
           links: {
             github:
               "https://github.com/DevCraftersEnterprise/magnolias-backend",
@@ -271,9 +271,9 @@ export const translations = {
         },
         {
           name: "Diocese of Cd. Obregón",
-          tagline: "Administrative & Public Platform",
+          tagline: "Digital infrastructure for ecclesiastical administration",
           description:
-            "Administrative system for parishes and deaneries with role-based navigation, reactive forms, and responsive layouts.",
+            "Multi-entity management platform with role-based access control, modular architecture, adaptive forms, and integrated public-facing interface.",
           image: "/images/projects/diocesis.png",
           logo: "/images/logos/diocesis-logo.png",
           tech: "angular,tailwind,rxjs,django,postgresql,cloudinary,render",
@@ -286,13 +286,12 @@ export const translations = {
         },
         {
           name: "Magnolias Bakery",
-          tagline: "E-commerce Platform",
+          tagline: "Multi-branch management for custom order workflows",
           description:
-            "E-commerce platform for artisan bakery with interactive catalog, shopping cart, and order management.",
-          image:
-            "https://placehold.co/1919x908/EEE/31343C?font=montserrat&text=Building",
+            "Administrative and public platform for pastry businesses with role-based access, structured multi-step order flow, dynamic product configuration, and landing synchronization with internal catalogs.",
+          image: "/images/projects/magnolias.png",
           logo: "/images/logos/magnolias.png",
-          tech: "vue,nestjs,postgresql,cloudinary,render",
+          tech: "nuxt,nestjs,postgresql,cloudinary,render",
           links: {
             github:
               "https://github.com/DevCraftersEnterprise/magnolias-backend",
