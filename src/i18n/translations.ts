@@ -108,6 +108,7 @@ export const translations = {
           logo: "/images/logos/magnolias.png",
           tech: "nuxt,nestjs,postgresql,cloudinary,render",
           links: {
+            demo: "https://pasteleriamagnolias.mx",
             github:
               "https://github.com/DevCraftersEnterprise/magnolias-backend",
           },
@@ -293,6 +294,7 @@ export const translations = {
           logo: "/images/logos/magnolias.png",
           tech: "nuxt,nestjs,postgresql,cloudinary,render",
           links: {
+            demo: "https://pasteleriamagnolias.mx",
             github:
               "https://github.com/DevCraftersEnterprise/magnolias-backend",
           },
