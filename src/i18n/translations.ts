@@ -114,6 +114,20 @@ export const translations = {
           },
           featured: true,
         },
+        {
+          name: "La Focacha Restaurant",
+          tagline: "Gestión multi-sucursal para reservaciones",
+          description:
+            "Plataforma administrativa para negocio de restaurantería con control de acceso basado en roles y flujo estructurado de reservaciones",
+          image: "/images/projects/focacha.png",
+          logo: "/images/logos/focacha.png",
+          tech: "angular,tailwind,rxjs,nestjs,postgresql,render",
+          links: {
+            github:
+              "https://github.com/DevCraftersEnterprise/focacha-reservations-api",
+          },
+          featured: true,
+        }
       ],
     },
     tech: {
@@ -297,6 +311,21 @@ export const translations = {
             demo: "https://pasteleriamagnolias.mx",
             github:
               "https://github.com/DevCraftersEnterprise/magnolias-backend",
+          },
+          featured: true,
+        },
+        {
+          name: "La Focacha Restaurant",
+          tagline: "Multi-branch management for reservations",
+          description:
+            "Administrative platform for restaurant businesses with role-based access, structured reservation flow",
+          image: "/images/projects/focacha.png",
+          logo: "/images/logos/focacha.png",
+          tech: "angular,tailwind,rxjs,nestjs,postgresql,render",
+          links: {
+            demo: "https://lafocacha.mx",
+            github:
+              "https://github.com/DevCraftersEnterprise/focacha-reservations-api",
           },
           featured: true,
         },
