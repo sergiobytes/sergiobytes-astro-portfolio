@@ -323,7 +323,6 @@ export const translations = {
           logo: "/images/logos/focacha.png",
           tech: "angular,tailwind,rxjs,nestjs,postgresql,render",
           links: {
-            demo: "https://lafocacha.mx",
             github:
               "https://github.com/DevCraftersEnterprise/focacha-reservations-api",
           },
