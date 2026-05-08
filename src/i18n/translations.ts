@@ -39,6 +39,13 @@ export const translations = {
       remote: "Remoto desde",
       experiences: [
         {
+          company: "Capgemini",
+          role: "Angular Frontend Developer",
+          period: "May 2026 - Present",
+          location: "Aguascalientes, Ags.",
+          highlights: []
+        },
+        {
           company: "Creative Software International",
           role: "Full Stack Developer",
           period: "Jul 2025 - Oct 2025",
@@ -239,6 +246,13 @@ export const translations = {
       title: "Experience",
       remote: "Remote from",
       experiences: [
+        {
+          company: "Capgemini",
+          role: "Angular Frontend Developer",
+          period: "May 2026 - Present",
+          location: "Aguascalientes, Ags.",
+          highlights: []
+        },
         {
           company: "Creative Software International",
           role: "Full Stack Developer",
