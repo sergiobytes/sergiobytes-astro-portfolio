@@ -1,7 +1,7 @@
 ---
 import { getTranslations, type Language } from "../i18n/translations";
 import SectionHeader from "./common/SectionHeader.astro";
-import ContactForm from "./ContactForm.astro";
+// import ContactForm from "./ContactForm.astro";
 
 interface Props {
   lang?: Language;
@@ -33,6 +33,6 @@ const t = getTranslations(lang);
     </p>
 
     <!-- Contact Form -->
-    <ContactForm lang={lang} />
+    <!-- <ContactForm lang={lang} /> -->
   </div>
 </section>
