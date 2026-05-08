@@ -16,7 +16,7 @@ export const translations = {
         "Especializado en crear aplicaciones web escalables con <strong>Angular</strong>, <strong>NestJS</strong> y <strong>TypeScript</strong>. Apasionado por la arquitectura limpia, experiencia de usuario y automatización.",
       contactBtn: "Contáctame",
       downloadCV: "Descargar CV",
-      yearsExp: "4+ años exp.",
+      yearsExp: "5+ años exp.",
     },
     about: {
       title: "Sobre mí",
@@ -224,7 +224,7 @@ export const translations = {
         "Specialized in building scalable web applications with <strong>Angular</strong>, <strong>NestJS</strong>, and <strong>TypeScript</strong>. Passionate about clean architecture, user experience, and automation.",
       contactBtn: "Contact Me",
       downloadCV: "Download CV",
-      yearsExp: "4+ years exp.",
+      yearsExp: "5+ years exp.",
     },
     about: {
       title: "About Me",
