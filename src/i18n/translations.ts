@@ -41,7 +41,7 @@ export const translations = {
         {
           company: "Capgemini",
           role: "Angular Frontend Developer",
-          period: "May 2026 - Present",
+          period: "May 2026 - Presente",
           location: "Aguascalientes, Ags.",
           highlights: []
         },
