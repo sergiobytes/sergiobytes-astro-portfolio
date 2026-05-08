@@ -21,7 +21,7 @@ export const translations = {
     about: {
       title: "Sobre mí",
       paragraph1:
-        "Soy un <strong>Full Stack Developer</strong> con más de 4 años de experiencia construyendo aplicaciones web escalables. Mi enfoque se centra en crear soluciones eficientes, mantenibles y centradas en el usuario.",
+        "Soy un <strong>Full Stack Developer</strong> con más de 5 años de experiencia construyendo aplicaciones web escalables. Mi enfoque se centra en crear soluciones eficientes, mantenibles y centradas en el usuario.",
       paragraph2:
         "Me especializo en arquitecturas modernas usando <strong>Angular</strong>, <strong>NestJS</strong> y <strong>TypeScript</strong>, siempre aplicando principios SOLID y Clean Architecture para garantizar código de calidad.",
       paragraph3:
@@ -229,7 +229,7 @@ export const translations = {
     about: {
       title: "About Me",
       paragraph1:
-        "I'm a <strong>Full Stack Developer</strong> with over 4 years of experience building scalable web applications. My focus is on creating efficient, maintainable, and user-centered solutions.",
+        "I'm a <strong>Full Stack Developer</strong> with over 5 years of experience building scalable web applications. My focus is on creating efficient, maintainable, and user-centered solutions.",
       paragraph2:
         "I specialize in modern architectures using <strong>Angular</strong>, <strong>NestJS</strong>, and <strong>TypeScript</strong>, always applying SOLID principles and Clean Architecture to ensure quality code.",
       paragraph3:
