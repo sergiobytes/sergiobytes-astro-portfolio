@@ -114,7 +114,7 @@ export const translations = {
           name: "Pastelería Magnolias",
           tagline: "Arquitectura digital para pastelerías multi-sucursal",
           description:
-            "Sistema integral para pastelería con gestión multi-sucursal, flujo estructurado de pedidos personalizados y panel administrativo con control por roles. Incluye landing pública sincronizada con el catálogo interno.",
+            "Sistema administrativo multi-sucursal para una pastelería, con flujos de pedidos complejos (domicilio, eventos, venta en tienda) y control de acceso por roles. Incluye mecanismos de autorización de un solo uso vía JWT para acciones sensibles (descuentos, autoría de pedidos en cuentas compartidas por sucursal) y pipeline de CI/CD con tests automatizados y quality gates de SonarQube. Landing pública sincronizada con el catálogo interno.",
           image: "/images/projects/magnolias.png",
           logo: "/images/logos/magnolias.png",
           tech: "nuxt,nestjs,postgresql,cloudinary,render,sonarqube",
@@ -327,7 +327,7 @@ export const translations = {
           name: "Magnolias Bakery",
           tagline: "Multi-branch management for custom order workflows",
           description:
-            "Administrative and public platform for pastry businesses with role-based access, structured multi-step order flow, dynamic product configuration, and landing synchronization with internal catalogs.",
+            "Multi-branch administrative system for a bakery, with complex order flows (delivery, events, in-store sales) and role-based access control. Includes single-use JWT authorization for sensitive actions (discounts, order authorship on branch-shared accounts) and a CI/CD pipeline with automated tests and SonarQube quality gates. Public landing page synced with the internal catalog.",
           image: "/images/projects/magnolias.png",
           logo: "/images/logos/magnolias.png",
           tech: "nuxt,nestjs,postgresql,cloudinary,render,sonarqube",
