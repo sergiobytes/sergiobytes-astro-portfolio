@@ -2,6 +2,7 @@
 import { getTranslations, type Language } from "../i18n/translations";
 import { Image } from "astro:assets";
 import SectionHeader from "./common/SectionHeader.astro";
+import { skillNames } from "../data/skillNames";
 
 interface Props {
   lang?: Language;
@@ -92,12 +93,23 @@ const projects = t.projects.items;
               </p>
 
               {/* TECH STACK */}
-              <div class="mb-4">
-                <img
-                  src={`https://skills.syvixor.com/api/icons?i=${project.tech}`}
-                  alt="Tech Stack"
-                  class="h-7"
-                />
+              <div class="flex flex-wrap items-center gap-3 mb-4">
+                {project.tech.split(",").map((skill) => {
+                  const skillName = skillNames[skill] ?? skill;
+                  return (
+                    <div class="relative group/icon">
+                      <img
+                        src={`https://skills.syvixor.com/api/icons?i=${skill}`}
+                        alt={skillName}
+                        title={skillName}
+                        class="h-7 w-7 object-contain transition-transform group-hover/icon:scale-110"
+                      />
+                      <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 w-max max-w-28 text-center rounded-md bg-slate-900 dark:bg-slate-700 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 z-20 group-hover/icon:opacity-100">
+                        {skillName}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
 
               {/* LINKS */}

@@ -87,7 +87,7 @@ export const translations = {
             "Plataforma SaaS que permite a clientes ordenar comida vía WhatsApp usando IA conversacional. Arquitectura multi-restaurante con QR dinámicos.",
           image: "/images/projects/botbite.png",
           logo: "/images/logos/botbite.png",
-          tech: "angular,tailwind,rxjs,websockets,nestjs,postgresql,redis,chatgpt,twilio,cloudinary,render",
+          tech: "angular,tailwind,rxjs,websocket,nestjs,postgresql,redis,chatgpt,twilio,cloudinary,render",
           links: {
             demo: "https://botbite.com.mx",
             github: "https://github.com/sergiobytes/botbite-waiter-app",
@@ -301,7 +301,7 @@ export const translations = {
             "SaaS platform that allows customers to order food via WhatsApp using conversational AI. Multi-restaurant architecture with dynamic QR codes.",
           image: "/images/projects/botbite.png",
           logo: "/images/logos/botbite.png",
-          tech: "angular,tailwind,rxjs,websockets,nestjs,postgresql,redis,chatgpt,twilio,cloudinary,render",
+          tech: "angular,tailwind,rxjs,websocket,nestjs,postgresql,redis,chatgpt,twilio,cloudinary,render",
           links: {
             demo: "https://botbite.com.mx",
             github: "https://github.com/sergiobytes/botbite-waiter-app",
