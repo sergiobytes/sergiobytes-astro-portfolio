@@ -43,7 +43,11 @@ export const translations = {
           role: "Angular Frontend Developer",
           period: "May 2026 - Presente",
           location: "Aguascalientes, Ags.",
-          highlights: []
+          highlights: [
+            "Resolví problemas de accesibilidad (a11y) en la librería de componentes compartida entre los proyectos de la empresa",
+            "Colaboré con el equipo de diseño en la creación de nuevos componentes reutilizables para el sistema de diseño",
+            "Facilité la adopción de componentes ya existentes documentando escenarios de uso que no estaban cubiertos",
+          ]
         },
         {
           company: "Creative Software International",
@@ -113,7 +117,7 @@ export const translations = {
             "Sistema integral para pastelería con gestión multi-sucursal, flujo estructurado de pedidos personalizados y panel administrativo con control por roles. Incluye landing pública sincronizada con el catálogo interno.",
           image: "/images/projects/magnolias.png",
           logo: "/images/logos/magnolias.png",
-          tech: "nuxt,nestjs,postgresql,cloudinary,render",
+          tech: "nuxt,nestjs,postgresql,cloudinary,render,sonarqube",
           links: {
             demo: "https://pasteleriamagnolias.mx",
             github:
@@ -121,6 +125,7 @@ export const translations = {
           },
           featured: true,
         },
+        /* Ocultado: el cliente no aprobó el proyecto por el precio cotizado
         {
           name: "La Focacha Restaurant",
           tagline: "Gestión multi-sucursal para reservaciones",
@@ -135,6 +140,7 @@ export const translations = {
           },
           featured: true,
         }
+        */
       ],
     },
     tech: {
@@ -251,7 +257,11 @@ export const translations = {
           role: "Angular Frontend Developer",
           period: "May 2026 - Present",
           location: "Aguascalientes, Ags.",
-          highlights: []
+          highlights: [
+            "Resolved accessibility (a11y) issues in the shared component library used across company projects",
+            "Collaborated with the design team on the creation of new reusable components for the design system",
+            "Improved adoption of existing components by documenting previously uncovered use cases",
+          ]
         },
         {
           company: "Creative Software International",
@@ -320,7 +330,7 @@ export const translations = {
             "Administrative and public platform for pastry businesses with role-based access, structured multi-step order flow, dynamic product configuration, and landing synchronization with internal catalogs.",
           image: "/images/projects/magnolias.png",
           logo: "/images/logos/magnolias.png",
-          tech: "nuxt,nestjs,postgresql,cloudinary,render",
+          tech: "nuxt,nestjs,postgresql,cloudinary,render,sonarqube",
           links: {
             demo: "https://pasteleriamagnolias.mx",
             github:
@@ -328,6 +338,7 @@ export const translations = {
           },
           featured: true,
         },
+        /* Hidden: the client didn't approve the project due to the quoted price
         {
           name: "La Focacha Restaurant",
           tagline: "Multi-branch management for reservations",
@@ -342,6 +353,7 @@ export const translations = {
           },
           featured: true,
         },
+        */
       ],
     },
     tech: {
