@@ -84,10 +84,10 @@ export const translations = {
           name: "BotBite",
           tagline: "Asistente IA de Mesero para Restaurantes",
           description:
-            "Plataforma para restaurantes donde los clientes escanean un código QR en su mesa y hacen su pedido por WhatsApp con un mesero virtual de inteligencia artificial. El asistente entiende mensajes de texto y de voz, recomienda opciones del menú y envía los pedidos a caja en tiempo real. Los restaurantes administran sus sucursales, menús y productos desde un panel web.",
+            "Plataforma para restaurantes donde los comensales escanean un código QR en su mesa y hacen su pedido por WhatsApp con un mesero virtual de inteligencia artificial, sin instalar ninguna app. El asistente atiende en español, inglés, francés y coreano, entiende mensajes de texto y notas de voz, muestra fotos y recomendaciones del menú, recibe solicitudes para la mesa y permite pedir la cuenta. Los dueños administran sus sucursales y menús desde un panel web, y cajeros y meseros reciben los pedidos en tiempo real desde su propia vista.",
           image: "/images/projects/botbite.png",
           logo: "/images/logos/botbite.png",
-          tech: "angular,tailwind,rxjs,websocket,nestjs,typeorm,postgresql,redis,chatgpt,twilio,cloudinary,render",
+          tech: "angular,tailwind,rxjs,websocket,nestjs,typeorm,postgresql,swagger,chatgpt,twilio,cloudinary,render",
           links: {
             demo: "https://botbite.com.mx",
             github: "https://github.com/DevCraftersEnterprise/botbite-waiter-app",
@@ -313,10 +313,10 @@ export const translations = {
           name: "BotBite",
           tagline: "AI Waiter Assistant for Restaurants",
           description:
-            "Restaurant platform where customers scan a QR code at their table and place their order over WhatsApp with an AI virtual waiter. The assistant understands text and voice messages, suggests menu options, and sends orders to the cashier in real time. Restaurants manage their branches, menus, and products from a web dashboard.",
+            "Restaurant platform where diners scan a QR code at their table and place their order over WhatsApp with an AI virtual waiter, with no app to install. The assistant speaks Spanish, English, French, and Korean, understands text and voice messages, shares dish photos and recommendations, handles table requests, and lets guests ask for the bill. Owners manage their branches and menus from a web dashboard, while cashiers and waiters receive orders in real time from their own view.",
           image: "/images/projects/botbite.png",
           logo: "/images/logos/botbite.png",
-          tech: "angular,tailwind,rxjs,websocket,nestjs,typeorm,postgresql,redis,chatgpt,twilio,cloudinary,render",
+          tech: "angular,tailwind,rxjs,websocket,nestjs,typeorm,postgresql,swagger,chatgpt,twilio,cloudinary,render",
           links: {
             demo: "https://botbite.com.mx",
             github: "https://github.com/DevCraftersEnterprise/botbite-waiter-app",
