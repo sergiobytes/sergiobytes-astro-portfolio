@@ -40,7 +40,7 @@ const projects = t.projects.items;
           >
             {/* PROJECT IMAGE */}
             <div class="relative h-48 sm:h-56 md:h-64 bg-linear-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800 overflow-hidden">
-              {project.image && (
+              {project.image ? (
                 <Image
                   src={project.image}
                   alt={project.name}
@@ -48,10 +48,28 @@ const projects = t.projects.items;
                   height={400}
                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center bg-linear-to-br from-teal-800 to-slate-900 group-hover:scale-110 transition-transform duration-500">
+                  {project.logo ? (
+                    <div class="bg-white p-5 rounded-2xl shadow-lg">
+                      <Image
+                        src={project.logo}
+                        alt={`${project.name} Logo`}
+                        width={96}
+                        height={96}
+                        class="w-20 h-20 object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <span class="text-6xl font-bold text-white/90" aria-hidden="true">
+                      {project.name.charAt(0)}
+                    </span>
+                  )}
+                </div>
               )}
 
               {/* LOGO OVERLAY */}
-              {project.logo && (
+              {project.image && project.logo && (
                 <div class="absolute top-4 left-4 bg-white p-3 rounded-lg shadow-md border dark:border-slate-700">
                   <Image
                     src={project.logo}

@@ -13,7 +13,7 @@ export const translations = {
       greeting: "Hola, soy",
       role: "Full Stack Developer",
       description:
-        "Especializado en crear aplicaciones web escalables con <strong>Angular</strong>, <strong>NestJS</strong> y <strong>TypeScript</strong>. Apasionado por la arquitectura limpia, experiencia de usuario y automatización.",
+        "Especializado en crear aplicaciones web escalables con <strong>Angular</strong>, <strong>Vue</strong>, <strong>NestJS</strong> y <strong>TypeScript</strong>. Apasionado por la arquitectura limpia, experiencia de usuario y automatización.",
       contactBtn: "Contáctame",
       downloadCV: "Descargar CV",
       yearsExp: "5+ años exp.",
@@ -23,7 +23,7 @@ export const translations = {
       paragraph1:
         "Soy un <strong>Full Stack Developer</strong> con más de 5 años de experiencia construyendo aplicaciones web escalables. Mi enfoque se centra en crear soluciones eficientes, mantenibles y centradas en el usuario.",
       paragraph2:
-        "Me especializo en arquitecturas modernas usando <strong>Angular</strong>, <strong>NestJS</strong> y <strong>TypeScript</strong>, siempre aplicando principios SOLID y Clean Architecture para garantizar código de calidad.",
+        "Me especializo en arquitecturas modernas usando <strong>Angular</strong>, <strong>Vue/Nuxt</strong>, <strong>NestJS</strong> y <strong>TypeScript</strong>, siempre aplicando principios SOLID y Clean Architecture. También tengo experiencia migrando sistemas legados (Django, Express, Flutter) a nuevos stacks de forma incremental, sin interrumpir la operación en producción.",
       paragraph3:
         "Co-fundador de <strong>DevCrafters</strong>, donde ayudamos a empresas a crear soluciones web, móviles y en la nube que transforman sus procesos de negocio.",
       devCraftersLink: "Conoce DevCrafters",
@@ -84,13 +84,13 @@ export const translations = {
           name: "BotBite",
           tagline: "Asistente IA de Mesero para Restaurantes",
           description:
-            "Plataforma SaaS que permite a clientes ordenar comida vía WhatsApp usando IA conversacional. Arquitectura multi-restaurante con QR dinámicos.",
+            "Plataforma para restaurantes donde los clientes escanean un código QR en su mesa y hacen su pedido por WhatsApp con un mesero virtual de inteligencia artificial. El asistente entiende mensajes de texto y de voz, recomienda opciones del menú y envía los pedidos a caja en tiempo real. Los restaurantes administran sus sucursales, menús y productos desde un panel web.",
           image: "/images/projects/botbite.png",
           logo: "/images/logos/botbite.png",
-          tech: "angular,tailwind,rxjs,websocket,nestjs,postgresql,redis,chatgpt,twilio,cloudinary,render",
+          tech: "angular,tailwind,rxjs,websocket,nestjs,typeorm,postgresql,redis,chatgpt,twilio,cloudinary,render",
           links: {
             demo: "https://botbite.com.mx",
-            github: "https://github.com/sergiobytes/botbite-waiter-app",
+            github: "https://github.com/DevCraftersEnterprise/botbite-waiter-app",
           },
           featured: true,
         },
@@ -99,14 +99,14 @@ export const translations = {
           tagline:
             "Infraestructura digital para la administración eclesiástica",
           description:
-            "Plataforma de gestión multi-entidad con control de acceso basado en roles, arquitectura modular, formularios adaptativos e interfaz pública integrada.",
+            "Plataforma de gestión para la Diócesis que centraliza la información de parroquias, sacerdotes, noticias y documentos, junto con su sitio web público. Incluye módulos para el Instituto Bíblico e ISMA con accesos por perfil, y una modernización progresiva del sistema sin interrumpir su operación diaria.",
           image: "/images/projects/diocesis.png",
           logo: "/images/logos/diocesis-logo.png",
-          tech: "angular,tailwind,rxjs,django,postgresql,cloudinary,render",
+          tech: "angular,tailwind,rxjs,nestjs,typeorm,django,postgresql,jest,cloudinary,render",
           links: {
             demo: "https://diocesisdeciudadobregon.org/inicio",
             github:
-              "https://github.com/Sergio-Frontend-Projects/diocesis-frontend-material",
+              "https://github.com/DevCraftersEnterprise/diocesis-web-api",
           },
           featured: true,
         },
@@ -114,10 +114,10 @@ export const translations = {
           name: "Pastelería Magnolias",
           tagline: "Arquitectura digital para pastelerías multi-sucursal",
           description:
-            "Sistema administrativo multi-sucursal para una pastelería, con flujos de pedidos complejos (domicilio, eventos, venta en tienda) y control de acceso por roles. Incluye mecanismos de autorización de un solo uso vía JWT para acciones sensibles (descuentos, autoría de pedidos en cuentas compartidas por sucursal) y pipeline de CI/CD con tests automatizados y quality gates de SonarQube. Landing pública sincronizada con el catálogo interno.",
+            "Sistema administrativo para una pastelería con varias sucursales que organiza todo el proceso de un pedido: desde que se toma en tienda, por redes sociales o por teléfono, pasando por su elaboración, hasta su entrega a domicilio o en eventos. Cada integrante del equipo (administradores, empleados, pasteleros y repartidores) tiene su propia vista y tareas. Incluye una tienda en línea sincronizada con el catálogo interno.",
           image: "/images/projects/magnolias.png",
           logo: "/images/logos/magnolias.png",
-          tech: "nuxt,nestjs,postgresql,cloudinary,render,sonarqube",
+          tech: "nuxt,tailwind,nestjs,typeorm,postgresql,jest,vitest,githubactions,sonarqube,cloudinary,render",
           links: {
             demo: "https://pasteleriamagnolias.mx",
             github:
@@ -125,6 +125,21 @@ export const translations = {
           },
           featured: true,
         },
+        /* Oculto de momento
+        {
+          name: "Sorteo Diócesis",
+          tagline: "Registro y control de participantes para sorteos",
+          description:
+            "Aplicación web para el sorteo anual de la Diócesis: los participantes se registran desde su celular y el equipo administrativo da seguimiento a los pagos, exporta los registros y cierra el sorteo desde un panel. Reemplaza una app móvil anterior sin interrumpir la operación.",
+          logo: "/images/logos/diocesis-logo.png",
+          tech: "vue,typescript,tailwind,vite,nestjs,postgresql,firebase,cloudinary,vitest,jest,githubactions,netlify,render",
+          links: {
+            github:
+              "https://github.com/DevCraftersEnterprise/sorteo-diocesis-backend",
+          },
+          featured: false,
+        },
+        */
         /* Ocultado: el cliente no aprobó el proyecto por el precio cotizado
         {
           name: "La Focacha Restaurant",
@@ -227,7 +242,7 @@ export const translations = {
       greeting: "Hi, I'm",
       role: "Full Stack Developer",
       description:
-        "Specialized in building scalable web applications with <strong>Angular</strong>, <strong>NestJS</strong>, and <strong>TypeScript</strong>. Passionate about clean architecture, user experience, and automation.",
+        "Specialized in building scalable web applications with <strong>Angular</strong>, <strong>Vue</strong>, <strong>NestJS</strong>, and <strong>TypeScript</strong>. Passionate about clean architecture, user experience, and automation.",
       contactBtn: "Contact Me",
       downloadCV: "Download CV",
       yearsExp: "5+ years exp.",
@@ -237,7 +252,7 @@ export const translations = {
       paragraph1:
         "I'm a <strong>Full Stack Developer</strong> with over 5 years of experience building scalable web applications. My focus is on creating efficient, maintainable, and user-centered solutions.",
       paragraph2:
-        "I specialize in modern architectures using <strong>Angular</strong>, <strong>NestJS</strong>, and <strong>TypeScript</strong>, always applying SOLID principles and Clean Architecture to ensure quality code.",
+        "I specialize in modern architectures using <strong>Angular</strong>, <strong>Vue/Nuxt</strong>, <strong>NestJS</strong>, and <strong>TypeScript</strong>, always applying SOLID principles and Clean Architecture. I also have experience incrementally migrating legacy systems (Django, Express, Flutter) to new stacks without disrupting production.",
       paragraph3:
         "Co-founder of <strong>DevCrafters</strong>, where we help companies create web, mobile, and cloud solutions that transform their business processes.",
       devCraftersLink: "Learn about DevCrafters",
@@ -298,13 +313,13 @@ export const translations = {
           name: "BotBite",
           tagline: "AI Waiter Assistant for Restaurants",
           description:
-            "SaaS platform that allows customers to order food via WhatsApp using conversational AI. Multi-restaurant architecture with dynamic QR codes.",
+            "Restaurant platform where customers scan a QR code at their table and place their order over WhatsApp with an AI virtual waiter. The assistant understands text and voice messages, suggests menu options, and sends orders to the cashier in real time. Restaurants manage their branches, menus, and products from a web dashboard.",
           image: "/images/projects/botbite.png",
           logo: "/images/logos/botbite.png",
-          tech: "angular,tailwind,rxjs,websocket,nestjs,postgresql,redis,chatgpt,twilio,cloudinary,render",
+          tech: "angular,tailwind,rxjs,websocket,nestjs,typeorm,postgresql,redis,chatgpt,twilio,cloudinary,render",
           links: {
             demo: "https://botbite.com.mx",
-            github: "https://github.com/sergiobytes/botbite-waiter-app",
+            github: "https://github.com/DevCraftersEnterprise/botbite-waiter-app",
           },
           featured: true,
         },
@@ -312,14 +327,14 @@ export const translations = {
           name: "Diocese of Cd. Obregón",
           tagline: "Digital infrastructure for ecclesiastical administration",
           description:
-            "Multi-entity management platform with role-based access control, modular architecture, adaptive forms, and integrated public-facing interface.",
+            "Management platform for the Diocese that centralizes information on parishes, priests, news, and documents, along with its public website. Includes modules for the Biblical Institute and ISMA with role-based access, and a progressive modernization of the system without disrupting day-to-day operations.",
           image: "/images/projects/diocesis.png",
           logo: "/images/logos/diocesis-logo.png",
-          tech: "angular,tailwind,rxjs,django,postgresql,cloudinary,render",
+          tech: "angular,tailwind,rxjs,nestjs,typeorm,django,postgresql,jest,cloudinary,render",
           links: {
             demo: "https://diocesisdeciudadobregon.org/inicio",
             github:
-              "https://github.com/Sergio-Frontend-Projects/diocesis-frontend-material",
+              "https://github.com/DevCraftersEnterprise/diocesis-web-api",
           },
           featured: true,
         },
@@ -327,10 +342,10 @@ export const translations = {
           name: "Magnolias Bakery",
           tagline: "Multi-branch management for custom order workflows",
           description:
-            "Multi-branch administrative system for a bakery, with complex order flows (delivery, events, in-store sales) and role-based access control. Includes single-use JWT authorization for sensitive actions (discounts, order authorship on branch-shared accounts) and a CI/CD pipeline with automated tests and SonarQube quality gates. Public landing page synced with the internal catalog.",
+            "Administrative system for a multi-branch bakery that organizes the entire order process: from taking the order in store, over social media, or by phone, through production, to home or event delivery. Each team member (admins, employees, bakers, and drivers) has their own view and tasks. Includes an online store synced with the internal catalog.",
           image: "/images/projects/magnolias.png",
           logo: "/images/logos/magnolias.png",
-          tech: "nuxt,nestjs,postgresql,cloudinary,render,sonarqube",
+          tech: "nuxt,tailwind,nestjs,typeorm,postgresql,jest,vitest,githubactions,sonarqube,cloudinary,render",
           links: {
             demo: "https://pasteleriamagnolias.mx",
             github:
@@ -338,6 +353,21 @@ export const translations = {
           },
           featured: true,
         },
+        /* Hidden for now
+        {
+          name: "Diocese Raffle",
+          tagline: "Participant registration and tracking for raffles",
+          description:
+            "Web app for the Diocese's annual raffle: participants sign up from their phone, and the admin team tracks payments, exports records, and closes the raffle from a dashboard. Replaces a previous mobile app without disrupting operations.",
+          logo: "/images/logos/diocesis-logo.png",
+          tech: "vue,typescript,tailwind,vite,nestjs,postgresql,firebase,cloudinary,vitest,jest,githubactions,netlify,render",
+          links: {
+            github:
+              "https://github.com/DevCraftersEnterprise/sorteo-diocesis-backend",
+          },
+          featured: false,
+        },
+        */
         /* Hidden: the client didn't approve the project due to the quoted price
         {
           name: "La Focacha Restaurant",
