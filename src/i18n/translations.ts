@@ -166,6 +166,7 @@ export const translations = {
           description:
             "Solitario clásico en TypeScript sin frameworks, con la lógica del juego desacoplada del DOM. Incluye deshacer, pistas y detección de partidas sin salida, y un drag & drop con Pointer Events que funciona con ratón, pantalla táctil y lápiz. Respeta la preferencia de movimiento reducido y se puede jugar con teclado.",
           tech: "typescript,vite,tailwind,githubactions",
+          image: "/images/projects/klondike.png",
           links: {
             demo: "https://sergiobytes.github.io/klondike-devcrafters/",
             github: "https://github.com/sergiobytes/klondike-devcrafters",
@@ -176,6 +177,7 @@ export const translations = {
           description:
             "Reproductor de música que arma una cola a partir de enlaces y playlists de YouTube. La capa de lógica está separada de las vistas mediante un patrón de suscripción. Incluye playlists guardadas con exportación e importación, 12 temas de color y atajos de teclado.",
           tech: "javascript,vite,tailwind,youtube,githubactions",
+          image: "/images/projects/rola.png",
           links: {
             demo: "https://sergiobytes.github.io/music-player-sergiobytes/",
             github: "https://github.com/sergiobytes/music-player-sergiobytes",
@@ -419,6 +421,7 @@ export const translations = {
           description:
             "Classic solitaire built in framework-free TypeScript, with game logic decoupled from the DOM. Includes undo, hints, and dead-end detection, plus Pointer Events drag & drop that works with mouse, touch, and pen. Honors reduced-motion preferences and supports keyboard play.",
           tech: "typescript,vite,tailwind,githubactions",
+          image: "/images/projects/klondike.png",
           links: {
             demo: "https://sergiobytes.github.io/klondike-devcrafters/",
             github: "https://github.com/sergiobytes/klondike-devcrafters",
@@ -429,6 +432,7 @@ export const translations = {
           description:
             "Music player that builds a queue from YouTube links and playlists. The logic layer is separated from the views through a subscription pattern. Includes saved playlists with export and import, 12 color themes, and keyboard shortcuts.",
           tech: "javascript,vite,tailwind,youtube,githubactions",
+          image: "/images/projects/rola.png",
           links: {
             demo: "https://sergiobytes.github.io/music-player-sergiobytes/",
             github: "https://github.com/sergiobytes/music-player-sergiobytes",
