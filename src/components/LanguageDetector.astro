@@ -335,6 +335,24 @@
       if (descriptionEl) descriptionEl.textContent = project.description;
     });
 
+    // Update side projects section
+    const sideProjectsTitle = document.querySelector(
+      '[data-i18n="sideProjects.title"]',
+    );
+    if (sideProjectsTitle) sideProjectsTitle.textContent = t.sideProjects.title;
+
+    t.sideProjects.items.forEach((project, index) => {
+      const nameEl = document.querySelector(
+        `[data-i18n="sideProjects.items.${index}.name"]`,
+      );
+      if (nameEl) nameEl.textContent = project.name;
+
+      const descriptionEl = document.querySelector(
+        `[data-i18n="sideProjects.items.${index}.description"]`,
+      );
+      if (descriptionEl) descriptionEl.textContent = project.description;
+    });
+
     // Update certifications section
     const certsTitle = document.querySelector(
       '[data-i18n="certifications.title"]',

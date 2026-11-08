@@ -1,0 +1,132 @@
+---
+import { getTranslations, type Language } from "../i18n/translations";
+import { Image } from "astro:assets";
+import SectionHeader from "./common/SectionHeader.astro";
+import { skillNames } from "../data/skillNames";
+
+interface Props {
+  lang?: Language;
+}
+
+interface SideProject {
+  name: string;
+  description: string;
+  tech: string;
+  image?: string;
+  links: { demo?: string; github?: string };
+}
+
+const { lang = "en" } = Astro.props;
+const t = getTranslations(lang);
+const projects: SideProject[] = t.sideProjects.items;
+
+// No id on the <section>: the header's scroll-spy highlights nav links by
+// section[id], and this section is intentionally not in the nav, so "Projects"
+// stays highlighted while scrolling through it. The anchor lives on the title.
+---
+
+<section
+  aria-labelledby="side-projects"
+  class="py-10 sm:py-12 md:py-16 px-4 sm:px-6 bg-slate-50 dark:bg-slate-800 relative"
+>
+  <div class="max-w-6xl mx-auto relative z-10">
+    <SectionHeader
+      id="side-projects"
+      title={t.sideProjects.title}
+      data-i18n="sideProjects.title"
+    />
+
+    <div class="grid md:grid-cols-2 gap-5 sm:gap-6">
+      {
+        projects.map((project, index) => (
+          <article
+            class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:border-teal-200 dark:hover:border-teal-600 hover:shadow-lg transition-all animate-fade-in-up"
+            data-reveal
+          >
+            {/* PROJECT IMAGE (smaller than client cards) */}
+            <div class="relative h-36 sm:h-40 overflow-hidden">
+              {project.image ? (
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  width={600}
+                  height={200}
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center bg-linear-to-br from-slate-600 to-slate-900 group-hover:scale-105 transition-transform duration-500">
+                  <span class="text-5xl font-bold text-white/80" aria-hidden="true">
+                    {project.name.charAt(0)}
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {/* CONTENT */}
+            <div class="flex flex-col flex-1 p-5">
+              <h3
+                class="text-xl font-bold text-slate-900 dark:text-white mb-2"
+                data-i18n={`sideProjects.items.${index}.name`}
+              >
+                {project.name}
+              </h3>
+              <p
+                class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed"
+                data-i18n={`sideProjects.items.${index}.description`}
+              >
+                {project.description}
+              </p>
+
+              {/* TECH STACK */}
+              <div class="flex flex-wrap items-center gap-2.5 mb-4 mt-auto">
+                {project.tech.split(",").map((skill) => {
+                  const skillName = skillNames[skill] ?? skill;
+                  return (
+                    <div class="relative group/icon">
+                      <img
+                        src={`https://skills.syvixor.com/api/icons?i=${skill}`}
+                        alt={skillName}
+                        title={skillName}
+                        loading="lazy"
+                        class="h-6 w-6 object-contain transition-transform group-hover/icon:scale-110"
+                      />
+                      <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 w-max max-w-28 text-center rounded-md bg-slate-900 dark:bg-slate-700 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 z-20 group-hover/icon:opacity-100">
+                        {skillName}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* LINKS */}
+              <div class="flex gap-3">
+                {project.links.demo && (
+                  <a
+                    href={project.links.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-4 py-2 bg-teal-900 dark:bg-teal-600 text-white rounded-lg hover:bg-teal-800 dark:hover:bg-teal-500 transition-all hover:scale-105 hover:shadow-md text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+                    data-i18n="projects.demo"
+                  >
+                    {t.projects.demo}
+                  </a>
+                )}
+                {project.links.github && (
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-4 py-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 rounded-lg hover:border-teal-900 dark:hover:border-teal-400 hover:text-teal-900 dark:hover:text-teal-400 transition-all hover:shadow-md text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-900 dark:focus:ring-teal-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+                    data-i18n="projects.github"
+                  >
+                    {t.projects.github}
+                  </a>
+                )}
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -72,4 +72,5 @@ export const skillNames: Record<string, string> = {
   visualstudio: "Visual Studio",
   vscode: "VS Code",
   cloudinary: "Cloudinary",
+  youtube: "YouTube IFrame API",
 };
