@@ -85,8 +85,8 @@ export const translations = {
           tagline: "Asistente IA de Mesero para Restaurantes",
           description:
             "Plataforma para restaurantes donde los comensales escanean un código QR en su mesa y hacen su pedido por WhatsApp con un mesero virtual de inteligencia artificial, sin instalar ninguna app. El asistente atiende en español, inglés, francés y coreano, entiende mensajes de texto y notas de voz, muestra fotos y recomendaciones del menú, recibe solicitudes para la mesa y permite pedir la cuenta. Los dueños administran sus sucursales y menús desde un panel web, y cajeros y meseros reciben los pedidos en tiempo real desde su propia vista.",
-          image: "/images/projects/botbite.png",
-          logo: "/images/logos/botbite.png",
+          image: "projects/botbite.png",
+          logo: "logos/botbite.png",
           tech: "angular,tailwind,rxjs,websocket,nestjs,typeorm,postgresql,swagger,chatgpt,twilio,cloudinary,render",
           links: {
             demo: "https://botbite.com.mx",
@@ -100,8 +100,8 @@ export const translations = {
             "Infraestructura digital para la administración eclesiástica",
           description:
             "Plataforma de gestión para la Diócesis que centraliza la información de parroquias, sacerdotes, noticias y documentos, junto con su sitio web público. Incluye módulos para el Instituto Bíblico e ISMA con accesos por perfil, y una modernización progresiva del sistema sin interrumpir su operación diaria.",
-          image: "/images/projects/diocesis.png",
-          logo: "/images/logos/diocesis-logo.png",
+          image: "projects/diocesis.png",
+          logo: "logos/diocesis-logo.png",
           tech: "angular,tailwind,rxjs,nestjs,typeorm,django,postgresql,jest,cloudinary,render",
           links: {
             demo: "https://diocesisdeciudadobregon.org/inicio",
@@ -115,8 +115,8 @@ export const translations = {
           tagline: "Arquitectura digital para pastelerías multi-sucursal",
           description:
             "Sistema administrativo para una pastelería con varias sucursales que organiza todo el proceso de un pedido: desde que se toma en tienda, por redes sociales o por teléfono, pasando por su elaboración, hasta su entrega a domicilio o en eventos. Cada integrante del equipo (administradores, empleados, pasteleros y repartidores) tiene su propia vista y tareas. Incluye una tienda en línea sincronizada con el catálogo interno.",
-          image: "/images/projects/magnolias.png",
-          logo: "/images/logos/magnolias.png",
+          image: "projects/magnolias.png",
+          logo: "logos/magnolias.png",
           tech: "nuxt,tailwind,nestjs,typeorm,postgresql,jest,vitest,githubactions,sonarqube,cloudinary,render",
           links: {
             demo: "https://pasteleriamagnolias.mx",
@@ -131,7 +131,7 @@ export const translations = {
           tagline: "Registro y control de participantes para sorteos",
           description:
             "Aplicación web para el sorteo anual de la Diócesis: los participantes se registran desde su celular y el equipo administrativo da seguimiento a los pagos, exporta los registros y cierra el sorteo desde un panel. Reemplaza una app móvil anterior sin interrumpir la operación.",
-          logo: "/images/logos/diocesis-logo.png",
+          logo: "logos/diocesis-logo.png",
           tech: "vue,typescript,tailwind,vite,nestjs,postgresql,firebase,cloudinary,vitest,jest,githubactions,netlify,render",
           links: {
             github:
@@ -146,8 +146,8 @@ export const translations = {
           tagline: "Gestión multi-sucursal para reservaciones",
           description:
             "Plataforma administrativa para negocio de restaurantería con control de acceso basado en roles y flujo estructurado de reservaciones",
-          image: "/images/projects/focacha.png",
-          logo: "/images/logos/focacha.png",
+          image: "projects/focacha.png",
+          logo: "logos/focacha.png",
           tech: "angular,tailwind,rxjs,nestjs,postgresql,render",
           links: {
             github:
@@ -166,7 +166,7 @@ export const translations = {
           description:
             "Solitario clásico en TypeScript sin frameworks, con la lógica del juego desacoplada del DOM. Incluye deshacer, pistas y detección de partidas sin salida, y un drag & drop con Pointer Events que funciona con ratón, pantalla táctil y lápiz. Respeta la preferencia de movimiento reducido y se puede jugar con teclado.",
           tech: "typescript,vite,tailwind,githubactions",
-          image: "/images/projects/klondike.png",
+          image: "projects/klondike.png",
           links: {
             demo: "https://sergiobytes.github.io/klondike-devcrafters/",
             github: "https://github.com/sergiobytes/klondike-devcrafters",
@@ -177,7 +177,7 @@ export const translations = {
           description:
             "Reproductor de música que arma una cola a partir de enlaces y playlists de YouTube. La capa de lógica está separada de las vistas mediante un patrón de suscripción. Incluye playlists guardadas con exportación e importación, 12 temas de color y atajos de teclado.",
           tech: "javascript,vite,tailwind,youtube,githubactions",
-          image: "/images/projects/rola.png",
+          image: "projects/rola.png",
           links: {
             demo: "https://sergiobytes.github.io/music-player-sergiobytes/",
             github: "https://github.com/sergiobytes/music-player-sergiobytes",
@@ -341,8 +341,8 @@ export const translations = {
           tagline: "AI Waiter Assistant for Restaurants",
           description:
             "Restaurant platform where diners scan a QR code at their table and place their order over WhatsApp with an AI virtual waiter, with no app to install. The assistant speaks Spanish, English, French, and Korean, understands text and voice messages, shares dish photos and recommendations, handles table requests, and lets guests ask for the bill. Owners manage their branches and menus from a web dashboard, while cashiers and waiters receive orders in real time from their own view.",
-          image: "/images/projects/botbite.png",
-          logo: "/images/logos/botbite.png",
+          image: "projects/botbite.png",
+          logo: "logos/botbite.png",
           tech: "angular,tailwind,rxjs,websocket,nestjs,typeorm,postgresql,swagger,chatgpt,twilio,cloudinary,render",
           links: {
             demo: "https://botbite.com.mx",
@@ -355,8 +355,8 @@ export const translations = {
           tagline: "Digital infrastructure for ecclesiastical administration",
           description:
             "Management platform for the Diocese that centralizes information on parishes, priests, news, and documents, along with its public website. Includes modules for the Biblical Institute and ISMA with role-based access, and a progressive modernization of the system without disrupting day-to-day operations.",
-          image: "/images/projects/diocesis.png",
-          logo: "/images/logos/diocesis-logo.png",
+          image: "projects/diocesis.png",
+          logo: "logos/diocesis-logo.png",
           tech: "angular,tailwind,rxjs,nestjs,typeorm,django,postgresql,jest,cloudinary,render",
           links: {
             demo: "https://diocesisdeciudadobregon.org/inicio",
@@ -370,8 +370,8 @@ export const translations = {
           tagline: "Multi-branch management for custom order workflows",
           description:
             "Administrative system for a multi-branch bakery that organizes the entire order process: from taking the order in store, over social media, or by phone, through production, to home or event delivery. Each team member (admins, employees, bakers, and drivers) has their own view and tasks. Includes an online store synced with the internal catalog.",
-          image: "/images/projects/magnolias.png",
-          logo: "/images/logos/magnolias.png",
+          image: "projects/magnolias.png",
+          logo: "logos/magnolias.png",
           tech: "nuxt,tailwind,nestjs,typeorm,postgresql,jest,vitest,githubactions,sonarqube,cloudinary,render",
           links: {
             demo: "https://pasteleriamagnolias.mx",
@@ -386,7 +386,7 @@ export const translations = {
           tagline: "Participant registration and tracking for raffles",
           description:
             "Web app for the Diocese's annual raffle: participants sign up from their phone, and the admin team tracks payments, exports records, and closes the raffle from a dashboard. Replaces a previous mobile app without disrupting operations.",
-          logo: "/images/logos/diocesis-logo.png",
+          logo: "logos/diocesis-logo.png",
           tech: "vue,typescript,tailwind,vite,nestjs,postgresql,firebase,cloudinary,vitest,jest,githubactions,netlify,render",
           links: {
             github:
@@ -401,8 +401,8 @@ export const translations = {
           tagline: "Multi-branch management for reservations",
           description:
             "Administrative platform for restaurant businesses with role-based access, structured reservation flow",
-          image: "/images/projects/focacha.png",
-          logo: "/images/logos/focacha.png",
+          image: "projects/focacha.png",
+          logo: "logos/focacha.png",
           tech: "angular,tailwind,rxjs,nestjs,postgresql,render",
           links: {
             github:
@@ -421,7 +421,7 @@ export const translations = {
           description:
             "Classic solitaire built in framework-free TypeScript, with game logic decoupled from the DOM. Includes undo, hints, and dead-end detection, plus Pointer Events drag & drop that works with mouse, touch, and pen. Honors reduced-motion preferences and supports keyboard play.",
           tech: "typescript,vite,tailwind,githubactions",
-          image: "/images/projects/klondike.png",
+          image: "projects/klondike.png",
           links: {
             demo: "https://sergiobytes.github.io/klondike-devcrafters/",
             github: "https://github.com/sergiobytes/klondike-devcrafters",
@@ -432,7 +432,7 @@ export const translations = {
           description:
             "Music player that builds a queue from YouTube links and playlists. The logic layer is separated from the views through a subscription pattern. Includes saved playlists with export and import, 12 color themes, and keyboard shortcuts.",
           tech: "javascript,vite,tailwind,youtube,githubactions",
-          image: "/images/projects/rola.png",
+          image: "projects/rola.png",
           links: {
             demo: "https://sergiobytes.github.io/music-player-sergiobytes/",
             github: "https://github.com/sergiobytes/music-player-sergiobytes",

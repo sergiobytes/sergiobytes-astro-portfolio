@@ -3,6 +3,7 @@ import { getTranslations, type Language } from "../i18n/translations";
 import { Image } from "astro:assets";
 import SectionHeader from "./common/SectionHeader.astro";
 import { skillNames } from "../data/skillNames";
+import { getAssetImage } from "../data/images";
 
 interface Props {
   lang?: Language;
@@ -47,10 +48,11 @@ const projects: SideProject[] = t.sideProjects.items;
             <div class="relative h-36 sm:h-40 overflow-hidden">
               {project.image ? (
                 <Image
-                  src={project.image}
+                  src={getAssetImage(project.image)}
                   alt={project.name}
-                  width={600}
-                  height={200}
+                  width={1200}
+                  widths={[480, 720, 960, 1200]}
+                  sizes="(min-width: 768px) 564px, 100vw"
                   class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
               ) : (
